@@ -11,7 +11,19 @@ const layoutFields = {
   layoutPortrait:{label:'Zdjęcie 03 · ludzie',hint:'Portret lub ekipa. Kadr / link / podpis.',type:'photo'},
   layoutRanking:{label:'Ranking wyników',hint:'Uwagi do tabel: układ, podpisy, wyróżnienia. Wyniki są już w materiałach sezonu.',type:'rankings'}
 };
-const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary','layoutTemplate',...Object.keys(layoutFields)];
+const interviewFields = ['personName','interviewStatus','interviewLead','interviewDate','interviewTopics','interviewQuestions','interviewNotes','interviewQuotes','interviewFollowup'];
+const interviewStatuses = ['Do zaproszenia','Zaproszenie wysłane','Termin ustalony','Rozmowa odbyta','Opracowanie wywiadu','Gotowe'];
+const interviewSeeds = [
+  {name:'Adam Chrapek',role:'Rywalizacja i pamięć sezonów'},
+  {name:'Filip Rzepecki',role:'Wyniki i wspomnienia uczestnika'},
+  {name:'Jakub Ilewicz',role:'Wyniki i wspomnienia uczestnika'},
+  {name:'Anna Berezik',role:'Wyniki i wspomnienia uczestniczki'},
+  {name:'Karolina Klimek',role:'Wyniki i wspomnienia uczestniczki'},
+  {name:'Katarzyna Ostrowska',role:'Perspektywa uczestniczki'},
+  {name:'Juliusz Mitan',role:'Perspektywa uczestnika'}
+];
+const interviewAliases = {'ania berezik':'anna berezik','kasia ostrowska':'katarzyna ostrowska','julek mitan':'juliusz mitan'};
+const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary','layoutTemplate',...Object.keys(layoutFields),...interviewFields];
 const layoutTemplates = {
   spread:{label:'2 strony · rozkładówka',pages:[
     {title:'Otwarcie i kronika',slots:['layoutTitle','layoutHero','layoutStory']},
@@ -33,15 +45,38 @@ try { const saved = JSON.parse(localStorage.getItem(storageKey) || '{}'); planni
 catch { storageOk = false; }
 
 function e(v) { return String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function personKey(name) {
+  const key=String(name).normalize('NFKC').trim().replace(/\s+/gu,' ').toLocaleLowerCase('pl');
+  return Object.hasOwn(interviewAliases,key)?interviewAliases[key]:key;
+}
+function personHref(key) { return `#osoba:${encodeURIComponent(key)}`; }
+function interviewNames(value) {
+  const parts=[];let part='',depth=0;
+  for(const char of String(value || '')){
+    if(char==='(')depth++;
+    if(char===')')depth=Math.max(0,depth-1);
+    if(depth===0 && [',',';','\n','/'].includes(char)){parts.push(part);part='';}
+    else part+=char;
+  }
+  parts.push(part);
+  const names=new Map();
+  for(const raw of parts.flatMap(p=>p.split(/\s+[-–—]\s+|[(:]/u)[0].split(/\s+i\s+/iu))){
+    const name=raw.replace(/^\s*[-*•]\s+/u,'').trim().replace(/\s+/gu,' ');
+    if(name && name.length<=160 && /\p{L}/u.test(name))names.set(personKey(name),name);
+  }
+  return [...names.values()];
+}
 function cleanPlanning(input) {
   const out = {};
   if (!input || typeof input !== 'object' || Array.isArray(input)) return out;
   const scopes = new Set(['global', ...D.seasons.map(s=>s.id)]);
   for (const [scope, fields] of Object.entries(input)) {
-    if (!scopes.has(scope) || !fields || typeof fields !== 'object' || Array.isArray(fields)) continue;
+    const personScope=scope.startsWith('person:') && scope.length<=167 && personKey(scope.slice(7))===scope.slice(7);
+    if ((!scopes.has(scope) && !personScope) || !fields || typeof fields !== 'object' || Array.isArray(fields)) continue;
+    if(personScope && typeof fields.personName==='string' && personKey(fields.personName)!==scope.slice(7))continue;
     out[scope] = {};
     for (const [key, value] of Object.entries(fields)) {
-      if (allowedFields.includes(key) && typeof value === 'string' && value.length <= 100000) out[scope][key] = value;
+      if ((personScope?interviewFields:allowedFields).includes(key) && typeof value === 'string' && value.length <= 100000) out[scope][key] = value;
     }
   }
   return out;
@@ -52,12 +87,38 @@ function list(items, cls='') { return `<ul class="${e(cls)}">${items.map(x=>`<li
 function unique(items) { return [...new Set(items.filter(Boolean))]; }
 function stats(items) { return `<div class="stats">${items.map(([n,t])=>`<div class="stat"><strong>${e(n)}</strong><span>${e(t)}</span></div>`).join('')}</div>`; }
 function sectionTitle(title,aside='') { return `<div class="section-title"><h2>${e(title)}</h2><span>${e(aside)}</span></div>`; }
+function interviewPeople() {
+  const people=new Map();
+  const add=(name,role='')=>{
+    const key=personKey(name);if(!key)return null;
+    if(!people.has(key))people.set(key,{key,name,role,seasons:[]});
+    return people.get(key);
+  };
+  interviewSeeds.forEach(p=>add(p.name,p.role));
+  for(const [scope,fields] of Object.entries(planning))if(scope.startsWith('person:'))add(fields.personName || scope.slice(7));
+  for(const s of D.seasons)for(const name of interviewNames(planning[s.id]?.interviewees)){
+    const p=add(name);if(p && !p.seasons.includes(s.id))p.seasons.push(s.id);
+  }
+  return [...people.values()].sort((a,b)=>a.name.localeCompare(b.name,'pl'));
+}
+function interviewStatus(person) {
+  const status=planning[`person:${person.key}`]?.interviewStatus;
+  return interviewStatuses.includes(status)?status:interviewStatuses[0];
+}
+function seasonInterviewLinks(s) {
+  const assigned=new Set(interviewNames(planning[s.id]?.interviewees).map(personKey));
+  const people=interviewPeople().filter(p=>assigned.has(p.key));
+  return people.length?people.map(p=>`<a class="person-chip" href="${e(personHref(p.key))}">${e(p.name)} <span>→ karta wywiadu</span></a>`).join(''):'<span class="metadata">Dopisane osoby pojawią się tutaj i w zakładce „Do przepytania”.</span>';
+}
+function seasonInterviewField(s) {
+  return `<div class="season-interview-field">${field(s.id,'interviewees','Z kim rozmawiamy?','Jedna osoba w wierszu, np. Adam Chrapek. Możesz też oddzielić osoby przecinkami.')}<p class="source-note">Każda dopisana osoba automatycznie trafia do <a href="#rozmowy">listy „Do przepytania”</a>. Pytania i notatki wpiszesz na jej karcie. Dodatkowy kontekst możesz dopisać po myślniku.</p><div id="season-interview-links" class="person-chip-list" aria-live="polite">${seasonInterviewLinks(s)}</div></div>`;
+}
 function field(scope,key,label,placeholder='',type='textarea') {
-  const value=planning[scope]?.[key] || (key==='status'?'Zbieramy materiały':'');
-  const id=`${scope}-${key}`;
+  const value=planning[scope]?.[key] || (key==='status'?'Zbieramy materiały':key==='interviewStatus'?interviewStatuses[0]:'');
+  const id=`${encodeURIComponent(scope)}-${key}`;
   const attrs=`id="${e(id)}" data-scope="${e(scope)}" data-field="${e(key)}" placeholder="${e(placeholder)}"`;
   let control;
-  if (type === 'select') control=`<select ${attrs}>${['Do omówienia','Zbieramy materiały','Rozmowy w toku','Szkic tekstu','Do korekty','Gotowe do składu'].map(x=>`<option ${value===x?'selected':''}>${e(x)}</option>`).join('')}</select>`;
+  if (type === 'select') control=`<select ${attrs}>${(key==='interviewStatus'?interviewStatuses:['Do omówienia','Zbieramy materiały','Rozmowy w toku','Szkic tekstu','Do korekty','Gotowe do składu']).map(x=>`<option ${value===x?'selected':''}>${e(x)}</option>`).join('')}</select>`;
   else if (type === 'input') control=`<input ${attrs} value="${e(value)}">`;
   else control=`<textarea ${attrs} rows="4">${e(value)}</textarea>`;
   return `<label class="field ${type==='textarea'?'wide':''}" for="${e(id)}">${e(label)}${control}</label>`;
@@ -67,8 +128,9 @@ function totals() {
 }
 function renderNav() {
   const route=(location.hash.slice(1).split(':')[0] || 'start');
-  const items=[['start','Przegląd albumu','01'],['wstep','Wstęp i układ','02'],['rozmowy','Rozmowy i redakcja','03'],['jubileusz','Rozdział jubileuszowy','04'],['hall','Hall of Fame','05']];
-  document.querySelector('#main-nav').innerHTML=items.map(([id,label,n])=>`<a href="#${id}" class="${route===id?'active':''}" ${route===id?'aria-current="page"':''}><span>${label}</span><span>${n}</span></a>`).join('');
+  const activeRoute=route==='osoba'?'rozmowy':route;
+  const items=[['start','Przegląd albumu','01'],['wstep','Wstęp i układ','02'],['rozmowy','Do przepytania','03'],['jubileusz','Rozdział jubileuszowy','04'],['hall','Hall of Fame','05']];
+  document.querySelector('#main-nav').innerHTML=items.map(([id,label,n])=>`<a href="#${id}" class="${activeRoute===id?'active':''}" ${activeRoute===id?'aria-current="page"':''}><span>${label}</span><span>${n}</span></a>`).join('');
   const q=document.querySelector('#season-search').value.trim().toLocaleLowerCase('pl');
   const found=D.seasons.filter(s=>!q || JSON.stringify(s).toLocaleLowerCase('pl').includes(q));
   document.querySelector('#season-nav').innerHTML=found.map(s=>`<a href="#${s.id}" class="${route===s.id?'active':''}" ${route===s.id?'aria-current="page"':''}><span>${e(s.label)}</span><span>${e(s.roman)}</span></a>`).join('');
@@ -145,7 +207,7 @@ function seasonPage(s) {
   <section id="galerie">${sectionTitle('Edycje i zdjęcia','Najpierw kalendarz, potem albumy')}${eventTable(s)}${sectionTitle('Katalog galerii','Link ≠ gotowy wybór zdjęć do druku')}${galleryTable(s)}</section>
   <section id="plan">${sectionTitle('Co chcemy opowiedzieć?','Pomysły do rozmowy, nie gotowy tekst')}
   <div class="two-col"><div class="panel"><h3>Tropy z przeczytanych relacji</h3>${angles.length?list(angles):'<p>Po lekturze zapiszcie najważniejszy konflikt sportowy, przełom albo scenę z tego sezonu.</p>'}${suggestedPeople.length?`<p class="source-note">Nazwiska pojawiające się w materiałach: ${suggestedPeople.map(e).join(', ')}.</p>`:''}<p class="source-note">To propozycje tematów, które wymagają Waszej pamięci i rozmów z uczestnikami.</p>${s.interviewCandidates.length?`<p class="source-note">Z Waszej kolejki rozmów: ${s.interviewCandidates.map(e).join(', ')}. Przypisanie do sezonu do ustalenia.</p>`:''}${s.editorialQuestions.length?`<details><summary>Pytania robocze do rozmów</summary>${list(s.editorialQuestions)}</details>`:''}</div><div class="panel"><h3>Do uzupełnienia w archiwum</h3>${gaps.length?list(gaps.slice(0,5)):'<p>Źródła znalezione. Kolejny etap: korekta, wspomnienia i wybór zdjęć.</p>'}${gaps.length>5?`<details><summary>Pozostałe braki (${gaps.length-5})</summary>${list(gaps.slice(5))}</details>`:''}</div></div>
-  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${field(s.id,'interviewees','Z kim rozmawiamy?','Nazwiska + co dana osoba może pamiętać.','input')}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>
+  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${seasonInterviewField(s)}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>
   <nav class="previous-next" aria-label="Sąsiednie sezony">${index>0?`<a href="#${D.seasons[index-1].id}">← ${e(D.seasons[index-1].label)}</a>`:'<a href="#start">← Przegląd</a>'}${index<D.seasons.length-1?`<a href="#${D.seasons[index+1].id}">${e(D.seasons[index+1].label)} →</a>`:'<a href="#jubileusz">Rozdział jubileuszowy →</a>'}</nav>`;
 }
 function introPage() {
@@ -161,14 +223,28 @@ function introPage() {
   <div class="planning"><div class="fields-grid">${field('global','intro','Wasz wstęp / uwagi do otwarcia','Autor wstępu, sceny otwierające, pomysły na fotografie.')}</div></div>`;
 }
 function interviewsPage() {
-  const people=[['Adam Chrapek','Rywalizacja i pamięć sezonów'],['Filip Rzepecki','Wyniki i wspomnienia uczestnika'],['Jakub Ilewicz','Wyniki i wspomnienia uczestnika'],['Ania Berezik','Wyniki i wspomnienia uczestniczki'],['Karolina Klimek','Wyniki i wspomnienia uczestniczki'],['Kasia Ostrowska','Perspektywa uczestniczki'],['Julek Mitan','Perspektywa uczestnika']];
-  return `<span class="eyebrow">LUDZIE TWORZĄ HISTORIĘ</span><h1 class="route-title">Z kim siadamy<br>do wspomnień?</h1><p class="muted">Lista wskazana przez Was. Daty rozmów i przypisanie do sezonów pozostają do ustalenia.</p>
+  const people=interviewPeople();
+  return `<span class="eyebrow">DO PRZEPYTANIA / WYWIADY</span><h1 class="route-title">Z kim siadamy<br>do wspomnień?</h1><p class="muted">Osoby dopisane w planach sezonów pojawiają się tu automatycznie, obok pierwszej kolejki wskazanej przez redakcję. Kliknij osobę, żeby przygotować i opracować wywiad.</p>
+  ${sectionTitle('Karty rozmówców',`${people.length} osób · pytania i notatki na osobnych kartach`)}
+  <div class="person-grid">${people.map(p=>`<a class="person person-card" href="${e(personHref(p.key))}"><p class="role">${e(interviewStatus(p))}</p><h3>${e(p.name)}</h3><p>${e(p.role || 'Osoba dopisana w planie sezonu.')}</p><div class="interview-seasons">${p.seasons.length?p.seasons.map(id=>`<span>${e(D.seasons.find(s=>s.id===id).label)}</span>`).join(''):'<span>Sezony do ustalenia</span>'}</div><span class="interview-card-action">Otwórz kartę wywiadu →</span></a>`).join('')}</div>
+  ${sectionTitle('Redakcja i archiwa','Podział pracy')}
   <div class="two-col"><div class="panel"><h3>Redakcja</h3><p><strong>Ty + Antoni Zalewski</strong> — autorzy albumu i redakcja wspomnień.</p><p><strong>Adam Smolik + Kuba Jasiński</strong> — pomoc w odtworzeniu ostatnich sezonów; dokładny podział uzgodnicie.</p></div><div class="panel"><h3>Archiwa i organizacja</h3><p><strong>Michał Szypliński</strong> — dostęp do wszystkich zdjęć potwierdzony przez Was. Do pozyskania indeks plików, nazwy galerii i kadry do składu.</p><p><strong>Organizatorzy AZS</strong> — dostęp do rozmów potwierdzony. Prosimy o pomoc przy korektach chronologii i tabeli medalowej.</p></div></div>
-  ${sectionTitle('Pierwsza kolejka rozmów','Kandydaci wskazani przez redakcję')}
-  <div class="person-grid">${people.map(([name,role])=>`<article class="person"><p class="role">DO ZAPROSZENIA</p><h3>${name}</h3><p>${role}. Najpierw przypiszmy konkretne sezony i wybierzmy zdjęcia wywołujące wspomnienia.</p><p class="source-note">Źródło listy: ustalenia z redakcją, 05.11.2026.</p></article>`).join('')}</div>
   ${sectionTitle('Krótki scenariusz rozmowy','Pytamy o sceny i szczegóły')}
   <div class="panel"><ol><li>Który sezon i który dzień pamiętasz najmocniej? Co pomaga go datować?</li><li>Co działo się tuż przed albo po przejeździe, czego nie widać w wynikach?</li><li>Kto jeszcze był przy tej historii i może dopowiedzieć szczegóły?</li><li>Które zdjęcie z galerii najlepiej przywołuje tę scenę?</li><li>Jak ta ekipa i ściganie wpłynęły na Twoje dalsze życie?</li></ol></div>
   <div class="planning"><div class="fields-grid">${field('global','teamNotes','Podział pracy i ustalenia z rozmówcami','Kto prowadzi rozmowę / sezony / materiały do pokazania / termin / status. Dane kontaktowe przechowujcie w swoim wspólnym notesie.')}</div></div>`;
+}
+function interviewPersonPage(person) {
+  if(!person)return `<a class="back-link" href="#rozmowy">← Do przepytania</a><h1 class="route-title">Karta nie jest<br>jeszcze dostępna.</h1><p>Otwórz kartę w przeglądarce, w której dodano tę osobę, albo zaimportuj eksport notatek. Osobę można też dopisać w polu „Z kim rozmawiamy?” w planie sezonu.</p>`;
+  const scope=`person:${person.key}`;
+  if(!planning[scope])planning[scope]={};
+  if(!planning[scope].personName){planning[scope].personName=person.name;save();}
+  const seasons=person.seasons.map(id=>D.seasons.find(s=>s.id===id));
+  return `<a class="back-link" href="#rozmowy">← Do przepytania</a><header class="interview-person-header"><span class="eyebrow">KARTA WYWIADU</span><h1 class="route-title">${e(person.name)}</h1><span class="pill plan" id="interview-person-status">${e(interviewStatus(person))}</span><p class="muted">${e(person.role || 'Pytania, wspomnienia i materiały do opracowania rozmowy.')}</p></header>
+  ${sectionTitle('Sezony do omówienia',seasons.length?'Połączone automatycznie z planami sezonów':'Przypisz osobę w planie wybranego sezonu')}
+  <div class="person-chip-list interview-season-links">${seasons.length?seasons.map(s=>`<a class="person-chip" href="#${e(s.id)}:plan">${e(s.label)} <span>→ plan sezonu</span></a>`).join(''):'<p class="source-note">Ta karta nie ma jeszcze przypisanego sezonu. Pytania i notatki możesz przygotować już teraz.</p>'}</div>
+  <div class="planning interview-notebook"><h2>Przygotowanie i zapis rozmowy</h2><p class="source-note">Zapis lokalny i eksport działają tak samo jak w planach sezonów. Dane tej osoby są wspólne dla wszystkich przypisanych sezonów.</p><div class="fields-grid">${field(scope,'interviewStatus','Status rozmowy','','select')}${field(scope,'interviewLead','Kto prowadzi?','Ty / Antoni / Adam / Kuba','input')}${field(scope,'interviewDate','Termin rozmowy','Data, godzina lub robocze ustalenie','input')}${field(scope,'interviewTopics','Tematy i kontekst','O czym chcemy porozmawiać? Jakie sezony, wydarzenia lub zdjęcia pokazać?')}${field(scope,'interviewQuestions','Pytania do wywiadu','Wpisz pytania, najlepiej po jednym w wierszu.')}${field(scope,'interviewNotes','Odpowiedzi i notatki z rozmowy','Zapis rozmowy, anegdoty, szczegóły do sprawdzenia i nazwiska innych świadków.')}${field(scope,'interviewQuotes','Cytaty i fragmenty do albumu','Wybrane wypowiedzi, kontekst oraz miejsce w albumie.')}${field(scope,'interviewFollowup','Dalsze kroki','O co dopytać? Jakie zdjęcia lub dokumenty ma dosłać rozmówca?')}</div></div>
+  ${seasons.length?`${sectionTitle('Kontekst z planów sezonów','Materiały pomocnicze do wywiadu')}${seasons.map(s=>`<details class="panel interview-season-context"><summary>${e(s.label)} · pytania i tropy</summary>${planning[s.id]?.questions?`<h3>Pytania zapisane w planie sezonu</h3><p class="note-readonly">${e(planning[s.id].questions)}</p>`:''}${planning[s.id]?.memories?`<h3>Wspomnienia z planu</h3><p class="note-readonly">${e(planning[s.id].memories)}</p>`:''}${s.editorialQuestions.length?`<h3>Robocze pytania na podstawie relacji</h3>${list(s.editorialQuestions)}`:''}<p class="source-note"><a href="#${e(s.id)}:relacje">Przejdź do relacji i galerii sezonu →</a></p></details>`).join('')}`:''}
+  <nav class="previous-next"><a href="#rozmowy">← Wszyscy rozmówcy</a></nav>`;
 }
 function anniversaryPage() {
   return `<span class="eyebrow">ROZDZIAŁ JUBILEUSZOWY</span><h1 class="route-title">Co zostaje<br>po tych zimach?</h1><p class="muted">Miejsce na domknięcie 14 sezonów. Tu połączymy pokolenia, a potem przejdziemy do Hall of Fame.</p>
@@ -212,9 +288,11 @@ function hallPage() {
 function route() {
   const [id='start',section]=location.hash.slice(1).split(':');
   const s=D.seasons.find(x=>x.id===id);
+  let key='';try{key=decodeURIComponent(section || '');}catch{}
+  const person=id==='osoba'?interviewPeople().find(p=>p.key===key):null;
   const pages={start:overview,wstep:introPage,rozmowy:interviewsPage,jubileusz:anniversaryPage,hall:hallPage};
-  main.innerHTML=s?seasonPage(s):(pages[id] || overview)();
-  document.title=`${s?s.label:({wstep:'Wstęp',rozmowy:'Rozmowy',jubileusz:'Jubileusz',hall:'Hall of Fame'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
+  main.innerHTML=id==='osoba'?interviewPersonPage(person):s?seasonPage(s):(pages[id] || overview)();
+  document.title=`${id==='osoba'?(person?.name || 'Karta wywiadu'):s?s.label:({wstep:'Wstęp',rozmowy:'Do przepytania',jubileusz:'Jubileusz',hall:'Hall of Fame'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
   renderNav();
   if(section && ['uklad','wyniki','relacje','galerie','plan'].includes(section)) requestAnimationFrame(()=>document.getElementById(section)?.scrollIntoView());
   else window.scrollTo({top:0});
@@ -245,7 +323,14 @@ main.addEventListener('click',ev=>{
   if(button){activeCategory=button.dataset.category;const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);if(!s)return;document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===activeCategory)));document.querySelector('#active-result').innerHTML=resultTable(s.classifications.find(c=>c.category===activeCategory));}
   if(ev.target.closest('#download-research')) download('azs-wintercup-materialy-2026-11-05.json',D);
 });
-main.addEventListener('input',ev=>{const t=ev.target;if(!t.dataset.field)return;const {scope,field:key}=t.dataset;if(!allowedFields.includes(key))return;if(!planning[scope])planning[scope]={};planning[scope][key]=t.value;save();if(Object.hasOwn(layoutFields,key)){const s=D.seasons.find(s=>s.id===scope);if(s)document.querySelector('#layout-completion').textContent=layoutCompletion(s);}});
+main.addEventListener('input',ev=>{
+  const t=ev.target;if(!t.dataset.field)return;
+  const {scope,field:key}=t.dataset;if(!allowedFields.includes(key))return;
+  if(!planning[scope])planning[scope]={};planning[scope][key]=t.value;save();
+  if(Object.hasOwn(layoutFields,key)){const s=D.seasons.find(s=>s.id===scope);if(s)document.querySelector('#layout-completion').textContent=layoutCompletion(s);}
+  if(key==='interviewees'){const s=D.seasons.find(s=>s.id===scope);if(s)document.querySelector('#season-interview-links').innerHTML=seasonInterviewLinks(s);}
+  if(key==='interviewStatus'){const person=interviewPeople().find(p=>`person:${p.key}`===scope);if(person)document.querySelector('#interview-person-status').textContent=interviewStatus(person);}
+});
 document.querySelector('#export').addEventListener('click',()=>download(`azs-wintercup-notatki-${new Date().toISOString().slice(0,10)}.json`,{format:'azs-wintercup-planning',version:1,exported_at:new Date().toISOString(),planning}));
 document.querySelector('#import').addEventListener('change',async ev=>{
   const file=ev.target.files[0];if(!file)return;

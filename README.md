@@ -19,6 +19,10 @@ Na każdej karcie sezonu: cztery indywidualne top 10 (GS/SL K/M), osobne ranking
 
 Sekcja **Układ stron** przy każdym sezonie zawiera edytowalną makietę: wariant dwustronicowej rozkładówki albo czterostronicowego rozdziału. Pola na tytuł, trzy zdjęcia z podpisami, kronikę, wspomnienie i ranking można wypełniać własnymi ustaleniami. Wszystkie sześć klasyfikacji ma stałe miejsce. Zmiana wariantu przestawia pola i zachowuje ich zawartość. Ustalenia są osobne dla każdego sezonu i wchodzą do istniejącego eksportu/importu notatek.
 
+Zakładka **Do przepytania** zbiera osoby z pola **Z kim rozmawiamy?** we wszystkich sezonach. Wpisuj jedną osobę w wierszu lub oddzielaj nazwiska przecinkami/średnikami; kontekst po myślniku albo w nawiasie pozostaje w planie. Ta sama osoba z kilku sezonów ma jedną kartę wywiadu z linkami do tych sezonów. Karty zawierają status, prowadzącego, termin, tematy, pytania, odpowiedzi/notatki, cytaty i dalsze kroki. Można je otworzyć bezpośrednio z planu sezonu. Otwarta karta i jej pytania pozostają zachowane również po usunięciu osoby z planu danego sezonu. Początkowa siódemka rozmówców także ma klikalne karty.
+
+Karty wywiadów są częścią lokalnego zapisu oraz eksportu/importu notatek. Dotychczasowe eksporty i plany sezonów pozostają obsługiwane. Sam link do nowo dodanej osoby nie przesyła jej pytań do innej przeglądarki — do przekazania całej karty służy eksport notatek.
+
 1. **84 tabele / 838 rekordów** z 28 oficjalnych PDF-ów klasyfikacji końcowych. W 2016/17 sklasyfikowano tylko osiem uczelni mężczyzn; tabela nie jest uzupełniana fikcyjnymi pozycjami.
 2. **39 streszczeń** z 14 sezonów. Autorstwo Michała Szyplińskiego potwierdzono w metadanych HTML wszystkich opracowanych wpisów. Każdy sezon ma relację finałową; 2024/25 i 2025/26 także każdą eliminację i równoległe. W dwóch materiałach wideo streszczono opis wpisu, nie obejrzano filmu.
 3. **197 linków NTN łącznie**, w tym powyższe 39. Pozostałe 158 to indeks do dalszej lektury; autorstwo nie jest automatycznie przypisane.
