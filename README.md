@@ -17,6 +17,8 @@ Repozytorium: **https://github.com/Maciorex/azs-wintercup-album-25**
 
 Na każdej karcie sezonu: cztery indywidualne top 10 (GS/SL K/M), osobne rankingi uczelni K/M, streszczenia i linki NTN, kalendarz edycji z wynikami, galerie z przypisaniem i statusami, tropy do rozmów oraz edytowalny notatnik. Do tego koncepcja wstępu, miejsca na zdjęcia, rozdział jubileuszowy i Hall of Fame.
 
+Sekcja **Układ stron** przy każdym sezonie zawiera edytowalną makietę: wariant dwustronicowej rozkładówki albo czterostronicowego rozdziału. Pola na tytuł, trzy zdjęcia z podpisami, kronikę, wspomnienie i ranking można wypełniać własnymi ustaleniami. Wszystkie sześć klasyfikacji ma stałe miejsce. Zmiana wariantu przestawia pola i zachowuje ich zawartość. Ustalenia są osobne dla każdego sezonu i wchodzą do istniejącego eksportu/importu notatek.
+
 1. **84 tabele / 838 rekordów** z 28 oficjalnych PDF-ów klasyfikacji końcowych. W 2016/17 sklasyfikowano tylko osiem uczelni mężczyzn; tabela nie jest uzupełniana fikcyjnymi pozycjami.
 2. **39 streszczeń** z 14 sezonów. Autorstwo Michała Szyplińskiego potwierdzono w metadanych HTML wszystkich opracowanych wpisów. Każdy sezon ma relację finałową; 2024/25 i 2025/26 także każdą eliminację i równoległe. W dwóch materiałach wideo streszczono opis wpisu, nie obejrzano filmu.
 3. **197 linków NTN łącznie**, w tym powyższe 39. Pozostałe 158 to indeks do dalszej lektury; autorstwo nie jest automatycznie przypisane.
@@ -26,7 +28,7 @@ Na każdej karcie sezonu: cztery indywidualne top 10 (GS/SL K/M), osobne ranking
 ## Jak dopisywać notatki
 
 1. Otwórz `index.html` w przeglądarce i wybierz sezon.
-2. Uzupełnij notatnik pod wynikami, relacjami i galeriami. Dopiski zapisują się **tylko w lokalnej pamięci tej przeglądarki**. Same pliki projektu nie są zmieniane.
+2. W sekcji **Układ stron** wybierz 2 lub 4 strony i wpisuj zawartość okienek; ogólne uwagi możesz dopisywać w notatniku sezonu. Dopiski zapisują się **tylko w lokalnej pamięci tej przeglądarki**. Same pliki projektu nie są zmieniane.
 3. Użyj **Eksport notatek**, żeby przekazać dopiski Antoniemu lub zachować kopię. **Import notatek** scala dane; pola obecne w imporcie zastępują odpowiadające pola lokalne. Przed importem do istniejących notatek strona pobiera kopię starego stanu.
 4. Baza materiałów jest osobnym eksportem JSON na stronie głównej. Publiczny hosting nie daje wspólnej edycji w czasie rzeczywistym.
 

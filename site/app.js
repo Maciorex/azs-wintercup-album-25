@@ -2,7 +2,28 @@
 const D = window.ALBUM_DATA;
 const main = document.querySelector('#main');
 const storageKey = 'azs-wintercup-album25-planning-v1';
-const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary'];
+const layoutFields = {
+  layoutTitle:{label:'Tytuł sezonu',hint:'Roboczy tytuł otwierający rozdział',type:'title'},
+  layoutHero:{label:'Zdjęcie 01 · otwarcie',hint:'Który kadr? Wpisz nazwę pliku lub link, osoby i pomysł na podpis.',type:'photo'},
+  layoutStory:{label:'Tekst · kronika sezonu',hint:'Co opowiemy? Główne wydarzenia, sceny i odnośniki do relacji NTN.',type:'text'},
+  layoutAction:{label:'Zdjęcie 02 · sport',hint:'Przejazd, meta lub podium. Kadr / link / podpis.',type:'photo'},
+  layoutMemory:{label:'Wspomnienie / cytat',hint:'Czyja historia? Bohater, temat rozmowy i wybrany fragment.',type:'memory'},
+  layoutPortrait:{label:'Zdjęcie 03 · ludzie',hint:'Portret lub ekipa. Kadr / link / podpis.',type:'photo'},
+  layoutRanking:{label:'Ranking wyników',hint:'Uwagi do tabel: układ, podpisy, wyróżnienia. Wyniki są już w materiałach sezonu.',type:'rankings'}
+};
+const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary','layoutTemplate',...Object.keys(layoutFields)];
+const layoutTemplates = {
+  spread:{label:'2 strony · rozkładówka',pages:[
+    {title:'Otwarcie i kronika',slots:['layoutTitle','layoutHero','layoutStory']},
+    {title:'Ludzie i wyniki',slots:['layoutMemory','layoutAction','layoutPortrait','layoutRanking']}
+  ]},
+  chapter:{label:'4 strony · rozdział',pages:[
+    {title:'Otwarcie sezonu',slots:['layoutTitle','layoutHero']},
+    {title:'Kronika i sport',slots:['layoutStory','layoutAction']},
+    {title:'Karta wyników',slots:['layoutRanking']},
+    {title:'Ludzie i wspomnienia',slots:['layoutMemory','layoutPortrait']}
+  ]}
+};
 const categoryLabels = {GS_K:'Gigant · kobiety',SL_K:'Slalom · kobiety',GS_M:'Gigant · mężczyźni',SL_M:'Slalom · mężczyźni',TEAM_K:'Uczelnie · kobiety',TEAM_M:'Uczelnie · mężczyźni'};
 const categoryOrder = Object.keys(categoryLabels);
 let planning = {};
@@ -91,14 +112,34 @@ function eventTable(s) {
   if(!s.events.length) return '<div class="empty">Kalendarz sezonu do odtworzenia z komunikatów organizatora.</div>';
   return `<div class="table-wrap"><table class="edition-table"><thead><tr><th scope="col">Data / zawody</th><th scope="col">Dokumentacja sportowa</th><th scope="col">Galerie tej edycji</th></tr></thead><tbody>${s.events.map(ev=>{const pe=s.photoEditions.find(p=>p.label===ev.label);const galleries=(pe?.gallery_urls||[]).map(u=>s.galleries.find(g=>g.url===u)).filter(Boolean);return `<tr><td>${e(ev.label)}${ev.notes?`<span class="metadata">${e(Array.isArray(ev.notes)?ev.notes.join(' '):ev.notes)}</span>`:''}</td><td>${(ev.results || []).map(r=>link(r.url,r.title,'gallery-link')).join('')}</td><td>${galleries.length?galleries.map(g=>`${link(g.url,g.platform,'gallery-link')}<span class="metadata">${e(galleryStatus(g))}</span>`).join(''):'<span class="pending-label">Brak przypisanego albumu — uzupełnić z archiwum</span>'}</td></tr>`;}).join('')}</tbody></table></div><p class="source-note">${link('https://wintercup.pl/wyniki/','Kalendarz według oficjalnego archiwum wyników')}. Galerie poniżej zachowują nazwy z archiwów zdjęć; niepewne przypisania wymagają uzgodnienia.</p>`;
 }
+function layoutCompletion(s) {
+  return `${Object.keys(layoutFields).filter(key=>planning[s.id]?.[key]?.trim()).length}/${Object.keys(layoutFields).length} pól uzupełnionych`;
+}
+function layoutSlot(s,key,compactPhotos) {
+  const f=layoutFields[key],id=`${s.id}-${key}`,value=planning[s.id]?.[key] || '';
+  const rankings=f.type==='rankings'?`<p class="layout-slot-hint">Top 10 SL i GS oraz klasyfikacje uczelni — osobno kobiety i mężczyźni.</p><div class="ranking-mini-grid" aria-label="Miejsce na sześć klasyfikacji">${categoryOrder.map(c=>`<span>${e(categoryLabels[c])}</span>`).join('')}</div>`:'';
+  const attrs=`id="${e(id)}" data-scope="${e(s.id)}" data-field="${e(key)}" placeholder="${e(f.hint)}"`;
+  return `<div class="layout-slot layout-slot-${f.type} ${key==='layoutHero'?'layout-slot-hero':''} ${compactPhotos && ['layoutAction','layoutPortrait'].includes(key)?'layout-slot-half':''}"><label for="${e(id)}">${e(f.label)}</label>${rankings}${f.type==='title'?`<input ${attrs} value="${e(value)}">`:`<textarea ${attrs} rows="3">${e(value)}</textarea>`}</div>`;
+}
+function seasonLayout(s) {
+  const selected=Object.hasOwn(layoutTemplates,planning[s.id]?.layoutTemplate)?planning[s.id].layoutTemplate:'spread';
+  const template=layoutTemplates[selected];
+  return `<section id="uklad" class="season-layout">${sectionTitle('Układ stron albumu','Edytowalna makieta / każdy sezon osobno')}
+    <p class="layout-intro">Wybierz przykładowy układ i wpisz w okienkach, co tu trafi: zdjęcie, tekst lub wspomnienie. Każdy wariant ma miejsce na ranking wyników. Zmiana wariantu zachowuje wpisaną zawartość.</p>
+    <div class="layout-toolbar"><div class="layout-options" role="group" aria-label="Wariant układu stron">${Object.entries(layoutTemplates).map(([key,t])=>`<button data-layout="${key}" aria-pressed="${key===selected}">${e(t.label)}</button>`).join('')}</div><span id="layout-completion" role="status">${e(layoutCompletion(s))}</span></div>
+    <div class="album-spread" data-template="${selected}">${template.pages.map((page,i)=>`<article class="album-page" aria-label="Strona ${i+1}: ${e(page.title)}"><header class="album-page-header"><span>SEZON ${e(s.label)}</span><span>${String(i+1).padStart(2,'0')} / ${String(template.pages.length).padStart(2,'0')}</span></header><h3>${e(page.title)}</h3><div class="album-page-content">${page.slots.map(key=>layoutSlot(s,key,selected==='spread')).join('')}</div><div class="album-page-footer">${e(s.label)}<span>${String(i+1).padStart(2,'0')}</span></div></article>`).join('')}</div>
+    <p class="source-note">To plan zawartości stron. Nazwy plików, linki i podpisy wpisujcie w polach „Zdjęcie”. Układ i dopiski zapisują się w tej przeglądarce oraz trafiają do eksportu notatek. <a href="#${e(s.id)}:wyniki">Zobacz tabele wyników tego sezonu →</a></p>
+  </section>`;
+}
 function seasonPage(s) {
   const index=D.seasons.indexOf(s);
   const suggestedPeople=unique(s.articles.flatMap(a=>a.people || [])).slice(0,10);
   const angles=unique(s.articles.flatMap(a=>a.story_angles || [])).slice(0,4);
   const gaps=unique([...s.resultGaps,...s.articleGaps,...s.photoGaps]);
   return `<header class="season-head"><div><span class="eyebrow">KARTA SEZONU / ${e(s.roman)} EDYCJA</span><h1>${e(s.label)}</h1><p class="description">${e(s.workingAngle || 'Kronika wyników i punkt wyjścia do wspomnień. Przejrzyj materiały, potem dopisz, co warto opowiedzieć.')}</p><span class="pill plan">${e(planning[s.id]?.status || 'Zbieramy materiały')}</span></div><div class="season-number" aria-hidden="true">${e(s.roman)}</div></header>
-  <nav class="subnav" aria-label="Sekcje sezonu">${[['wyniki','Generalki'],['relacje','Relacje NTN'],['galerie','Edycje i zdjęcia'],['plan','Plan i notatki']].map(([id,t])=>`<a href="#${s.id}:${id}">${t}</a>`).join('')}</nav>
+  <nav class="subnav" aria-label="Sekcje sezonu">${[['uklad','Układ stron'],['wyniki','Generalki'],['relacje','Relacje NTN'],['galerie','Edycje i zdjęcia'],['plan','Plan i notatki']].map(([id,t])=>`<a href="#${s.id}:${id}">${t}</a>`).join('')}</nav>
   ${stats([[s.classifications.length,'tabel końcowych'],[s.articles.length,'streszczeń NTN'],[s.galleries.length,'adresów galerii'],[s.events.length,'wydarzeń w archiwum']])}
+  ${seasonLayout(s)}
   <section id="wyniki">${sectionTitle('Klasyfikacje końcowe','Top 10 · SL / GS · uczelnie K i M')}<p class="source-note">To wyniki całego sezonu. Rankingi uczelni pozostają oddzielne dla kobiet i mężczyzn. W 2016/17 sklasyfikowano tylko 8 uczelni mężczyzn.</p><div class="category-tabs" role="group" aria-label="Klasyfikacja">${categoryOrder.map(cat=>`<button data-category="${cat}" aria-pressed="${cat===activeCategory}">${categoryLabels[cat]}</button>`).join('')}</div><div class="screen-table" id="active-result">${resultTable(s.classifications.find(c=>c.category===activeCategory))}</div><div class="print-only">${categoryOrder.map(cat=>resultTable(s.classifications.find(c=>c.category===cat),true)).join('')}</div></section>
   <section id="relacje">${sectionTitle('Co działo się w tym sezonie?','Streszczenia redakcyjne + oryginały NTN')}${articleCards(s.articles)}${s.articleIndex.length?`<details class="panel"><summary>Więcej odnalezionych materiałów NTN (${s.articleIndex.length})</summary><ul class="link-list">${s.articleIndex.map(a=>`<li>${link(a.url,a.title)}<small>${e(a.published || a.date || '')} · indeks uzupełniający; nie każdy materiał ma opracowane streszczenie</small></li>`).join('')}</ul></details>`:''}</section>
   <section id="galerie">${sectionTitle('Edycje i zdjęcia','Najpierw kalendarz, potem albumy')}${eventTable(s)}${sectionTitle('Katalog galerii','Link ≠ gotowy wybór zdjęć do druku')}${galleryTable(s)}</section>
@@ -158,7 +199,7 @@ function route() {
   main.innerHTML=s?seasonPage(s):(pages[id] || overview)();
   document.title=`${s?s.label:({wstep:'Wstęp',rozmowy:'Rozmowy',jubileusz:'Jubileusz',hall:'Hall of Fame'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
   renderNav();
-  if(section && ['wyniki','relacje','galerie','plan'].includes(section)) requestAnimationFrame(()=>document.getElementById(section)?.scrollIntoView());
+  if(section && ['uklad','wyniki','relacje','galerie','plan'].includes(section)) requestAnimationFrame(()=>document.getElementById(section)?.scrollIntoView());
   else window.scrollTo({top:0});
 }
 function download(filename, data) {
@@ -173,11 +214,21 @@ document.querySelector('#season-search').addEventListener('input',renderNav);
 document.querySelector('.skip').addEventListener('click',ev=>{ev.preventDefault();main.focus();});
 document.querySelector('#import-trigger').addEventListener('click',()=>document.querySelector('#import').click());
 main.addEventListener('click',ev=>{
+  const layoutButton=ev.target.closest('[data-layout]');
+  if(layoutButton){
+    const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);
+    const selected=layoutButton.dataset.layout;
+    if(!s || !Object.hasOwn(layoutTemplates,selected))return;
+    if(!planning[s.id])planning[s.id]={};
+    planning[s.id].layoutTemplate=selected;save();
+    document.querySelector('#uklad').outerHTML=seasonLayout(s);
+    document.querySelector(`[data-layout="${selected}"]`).focus({preventScroll:true});
+  }
   const button=ev.target.closest('[data-category]');
   if(button){activeCategory=button.dataset.category;const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);if(!s)return;document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===activeCategory)));document.querySelector('#active-result').innerHTML=resultTable(s.classifications.find(c=>c.category===activeCategory));}
   if(ev.target.closest('#download-research')) download('azs-wintercup-materialy-2026-11-05.json',D);
 });
-main.addEventListener('input',ev=>{const t=ev.target;if(!t.dataset.field)return;const {scope,field:key}=t.dataset;if(!allowedFields.includes(key))return;if(!planning[scope])planning[scope]={};planning[scope][key]=t.value;save();});
+main.addEventListener('input',ev=>{const t=ev.target;if(!t.dataset.field)return;const {scope,field:key}=t.dataset;if(!allowedFields.includes(key))return;if(!planning[scope])planning[scope]={};planning[scope][key]=t.value;save();if(Object.hasOwn(layoutFields,key)){const s=D.seasons.find(s=>s.id===scope);if(s)document.querySelector('#layout-completion').textContent=layoutCompletion(s);}});
 document.querySelector('#export').addEventListener('click',()=>download(`azs-wintercup-notatki-${new Date().toISOString().slice(0,10)}.json`,{format:'azs-wintercup-planning',version:1,exported_at:new Date().toISOString(),planning}));
 document.querySelector('#import').addEventListener('change',async ev=>{
   const file=ev.target.files[0];if(!file)return;
