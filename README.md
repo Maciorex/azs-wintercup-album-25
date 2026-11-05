@@ -17,6 +17,8 @@ Repozytorium: **https://github.com/Maciorex/azs-wintercup-album-25**
 
 Na każdej karcie sezonu: cztery indywidualne top 10 (GS/SL K/M), osobne rankingi uczelni K/M, streszczenia i linki NTN, kalendarz edycji z wynikami, galerie z przypisaniem i statusami, tropy do rozmów oraz edytowalny notatnik. Do tego koncepcja wstępu, miejsca na zdjęcia, rozdział jubileuszowy i Hall of Fame.
 
+Widok sezonu ma trzy niezależne zakładki: **Układ**, **Treść i notatki** oraz **Archiwum i wiedza**. Na ekranie jest tylko aktywna zawartość. Makiety są w pierwszej zakładce, plan i notatnik w drugiej, a generalki, relacje NTN i galerie w trzeciej. Wpisy zachowują się przy przełączaniu, a adres wskazuje wybraną zakładkę. Przyciski Wstecz/Dalej przeglądarki działają; zakładki obsługują również strzałki klawiatury oraz Home/End. Przejście do sąsiedniego sezonu zachowuje rodzaj zakładki. Stare odnośniki `:plan`, `:wyniki`, `:relacje` i `:galerie` otwierają odpowiadające im nowe widoki. Drukowana jest aktywna zakładka.
+
 Sekcja **Układ stron** przy każdym sezonie zawiera edytowalną makietę: wariant dwustronicowej rozkładówki albo czterostronicowego rozdziału. Pola na tytuł, trzy zdjęcia z podpisami, kronikę, wspomnienie i ranking można wypełniać własnymi ustaleniami. Wszystkie sześć klasyfikacji ma stałe miejsce. Zmiana wariantu przestawia pola i zachowuje ich zawartość. Ustalenia są osobne dla każdego sezonu i wchodzą do istniejącego eksportu/importu notatek.
 
 Zakładka **Do przepytania** zbiera osoby z pola **Z kim rozmawiamy?** we wszystkich sezonach. Wpisuj jedną osobę w wierszu lub oddzielaj nazwiska przecinkami/średnikami; kontekst po myślniku albo w nawiasie pozostaje w planie. Ta sama osoba z kilku sezonów ma jedną kartę wywiadu z linkami do tych sezonów. Karty zawierają status, prowadzącego, termin, tematy, pytania, odpowiedzi/notatki, cytaty i dalsze kroki. Można je otworzyć bezpośrednio z planu sezonu. Otwarta karta i jej pytania pozostają zachowane również po usunięciu osoby z planu danego sezonu. Początkowa siódemka rozmówców także ma klikalne karty.
@@ -34,7 +36,7 @@ Hall of Fame łączy historyczną bazę z **1004 medalami** z 334 rozegranych ko
 ## Jak dopisywać notatki
 
 1. Otwórz `index.html` w przeglądarce i wybierz sezon.
-2. W sekcji **Układ stron** wybierz 2 lub 4 strony i wpisuj zawartość okienek; ogólne uwagi możesz dopisywać w notatniku sezonu. Dopiski zapisują się **tylko w lokalnej pamięci tej przeglądarki**. Same pliki projektu nie są zmieniane.
+2. W zakładce **Układ** wybierz 2 lub 4 strony i wpisuj zawartość okienek; tekst i uwagi dopisuj w **Treść i notatki**. Dopiski zapisują się **tylko w lokalnej pamięci tej przeglądarki**. Same pliki projektu nie są zmieniane.
 3. Użyj **Eksport notatek**, żeby przekazać dopiski Antoniemu lub zachować kopię. **Import notatek** scala dane; pola obecne w imporcie zastępują odpowiadające pola lokalne. Przed importem do istniejących notatek strona pobiera kopię starego stanu.
 4. Baza materiałów jest osobnym eksportem JSON na stronie głównej. Publiczny hosting nie daje wspólnej edycji w czasie rzeczywistym.
 

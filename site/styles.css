@@ -83,3 +83,14 @@
 .interview-season-context h3{margin-top:20px;font-size:14px}
 @media(max-width:420px){.interview-person-header h1{font-size:44px}.interview-notebook{padding:20px 16px}.interview-notebook h2{font-size:24px}}
 @media print{.back-link,.interview-card-action{display:none}.person-card{break-inside:avoid}.interview-notebook{background:transparent}.interview-notebook textarea{min-height:176px}}
+
+.season-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:24px 0 32px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.season-tabs [role=tab]{min-width:0;min-height:64px;justify-content:flex-start;gap:12px;padding:12px 16px;background:var(--white);color:var(--muted);border-color:var(--line);font-size:13px;line-height:1.4;text-align:left;white-space:normal}
+.season-tabs [role=tab][aria-selected=true]{background:var(--dark);color:var(--white);border-color:var(--dark)}
+.season-tab-number{font:20px/1 Georgia,serif;opacity:.8}
+.season-tab-panel{min-width:0}
+.season-tab-panel[hidden]{display:none}
+.season-tab-panel>.stats{padding-top:0}
+.season-tab-panel>section>.section-title:first-child{margin-top:0}
+@media(max-width:420px){.season-tabs{gap:4px;margin-top:20px}.season-tabs [role=tab]{padding:12px 8px;font-size:11px;justify-content:center;text-align:center}.season-tab-number{display:none}}
+@media print{.season-tabs{display:none}.season-tab-panel[hidden]{display:none}}

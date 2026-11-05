@@ -38,8 +38,11 @@ const layoutTemplates = {
 };
 const categoryLabels = {GS_K:'Gigant · kobiety',SL_K:'Slalom · kobiety',GS_M:'Gigant · mężczyźni',SL_M:'Slalom · mężczyźni',TEAM_K:'Uczelnie · kobiety',TEAM_M:'Uczelnie · mężczyźni'};
 const categoryOrder = Object.keys(categoryLabels);
+const seasonTabs = [{id:'uklad',label:'Układ'},{id:'tresc',label:'Treść i notatki'},{id:'archiwum',label:'Archiwum i wiedza'}];
+const seasonTabAliases = {uklad:'uklad',tresc:'tresc',plan:'tresc',archiwum:'archiwum',wyniki:'archiwum',relacje:'archiwum',galerie:'archiwum'};
 let planning = {};
 let activeCategory = 'GS_K';
+let pendingSeasonTabFocus = null;
 let storageOk = true;
 try { const saved = JSON.parse(localStorage.getItem(storageKey) || '{}'); planning = cleanPlanning(saved); }
 catch { storageOk = false; }
@@ -190,25 +193,41 @@ function seasonLayout(s) {
     <p class="layout-intro">Wybierz przykładowy układ i wpisz w okienkach, co tu trafi: zdjęcie, tekst lub wspomnienie. Każdy wariant ma miejsce na ranking wyników. Zmiana wariantu zachowuje wpisaną zawartość.</p>
     <div class="layout-toolbar"><div class="layout-options" role="group" aria-label="Wariant układu stron">${Object.entries(layoutTemplates).map(([key,t])=>`<button data-layout="${key}" aria-pressed="${key===selected}">${e(t.label)}</button>`).join('')}</div><span id="layout-completion" role="status">${e(layoutCompletion(s))}</span></div>
     <div class="album-spread" data-template="${selected}">${template.pages.map((page,i)=>`<article class="album-page" aria-label="Strona ${i+1}: ${e(page.title)}"><header class="album-page-header"><span>SEZON ${e(s.label)}</span><span>${String(i+1).padStart(2,'0')} / ${String(template.pages.length).padStart(2,'0')}</span></header><h3>${e(page.title)}</h3><div class="album-page-content">${page.slots.map(key=>layoutSlot(s,key,selected==='spread')).join('')}</div><div class="album-page-footer">${e(s.label)}<span>${String(i+1).padStart(2,'0')}</span></div></article>`).join('')}</div>
-    <p class="source-note">To plan zawartości stron. Nazwy plików, linki i podpisy wpisujcie w polach „Zdjęcie”. Układ i dopiski zapisują się w tej przeglądarce oraz trafiają do eksportu notatek. <a href="#${e(s.id)}:wyniki">Zobacz tabele wyników tego sezonu →</a></p>
+    <p class="source-note">To plan zawartości stron. Nazwy plików, linki i podpisy wpisujcie w polach „Zdjęcie”. Układ i dopiski zapisują się w tej przeglądarce oraz trafiają do eksportu notatek. <a href="#${e(s.id)}:archiwum">Zobacz tabele wyników tego sezonu →</a></p>
   </section>`;
 }
-function seasonPage(s) {
-  const index=D.seasons.indexOf(s);
+function seasonTab(section) {
+  return Object.hasOwn(seasonTabAliases,section)?seasonTabAliases[section]:'uklad';
+}
+function openSeasonTab(button) {
+  const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);
+  const selected=button.dataset.seasonTab;
+  if(!s || !seasonTabs.some(t=>t.id===selected))return;
+  if(button.getAttribute('aria-selected')==='true'){button.focus({preventScroll:true});return;}
+  pendingSeasonTabFocus={season:s.id,tab:selected};
+  location.hash=`${s.id}:${selected}`;
+}
+function seasonArchive(s) {
+  return `${stats([[s.classifications.length,'tabel końcowych'],[s.articles.length,'streszczeń NTN'],[s.galleries.length,'adresów galerii'],[s.events.length,'wydarzeń w archiwum']])}
+  <section id="wyniki">${sectionTitle('Klasyfikacje końcowe','Top 10 · SL / GS · uczelnie K i M')}<p class="source-note">To wyniki całego sezonu. Rankingi uczelni pozostają oddzielne dla kobiet i mężczyzn. W 2016/17 sklasyfikowano tylko 8 uczelni mężczyzn.</p><div class="category-tabs" role="group" aria-label="Klasyfikacja">${categoryOrder.map(cat=>`<button data-category="${cat}" aria-pressed="${cat===activeCategory}">${categoryLabels[cat]}</button>`).join('')}</div><div class="screen-table" id="active-result">${resultTable(s.classifications.find(c=>c.category===activeCategory))}</div><div class="print-only">${categoryOrder.map(cat=>resultTable(s.classifications.find(c=>c.category===cat),true)).join('')}</div></section>
+  <section id="relacje">${sectionTitle('Co działo się w tym sezonie?','Streszczenia redakcyjne + oryginały NTN')}${articleCards(s.articles)}${s.articleIndex.length?`<details class="panel"><summary>Więcej odnalezionych materiałów NTN (${s.articleIndex.length})</summary><ul class="link-list">${s.articleIndex.map(a=>`<li>${link(a.url,a.title)}<small>${e(a.published || a.date || '')} · indeks uzupełniający; nie każdy materiał ma opracowane streszczenie</small></li>`).join('')}</ul></details>`:''}</section>
+  <section id="galerie">${sectionTitle('Edycje i zdjęcia','Najpierw kalendarz, potem albumy')}${eventTable(s)}${sectionTitle('Katalog galerii','Link ≠ gotowy wybór zdjęć do druku')}${galleryTable(s)}</section>`;
+}
+function seasonNotes(s) {
   const suggestedPeople=unique(s.articles.flatMap(a=>a.people || [])).slice(0,10);
   const angles=unique(s.articles.flatMap(a=>a.story_angles || [])).slice(0,4);
   const gaps=unique([...s.resultGaps,...s.articleGaps,...s.photoGaps]);
-  return `<header class="season-head"><div><span class="eyebrow">KARTA SEZONU / ${e(s.roman)} EDYCJA</span><h1>${e(s.label)}</h1><p class="description">${e(s.workingAngle || 'Kronika wyników i punkt wyjścia do wspomnień. Przejrzyj materiały, potem dopisz, co warto opowiedzieć.')}</p><span class="pill plan">${e(planning[s.id]?.status || 'Zbieramy materiały')}</span></div><div class="season-number" aria-hidden="true">${e(s.roman)}</div></header>
-  <nav class="subnav" aria-label="Sekcje sezonu">${[['uklad','Układ stron'],['wyniki','Generalki'],['relacje','Relacje NTN'],['galerie','Edycje i zdjęcia'],['plan','Plan i notatki']].map(([id,t])=>`<a href="#${s.id}:${id}">${t}</a>`).join('')}</nav>
-  ${stats([[s.classifications.length,'tabel końcowych'],[s.articles.length,'streszczeń NTN'],[s.galleries.length,'adresów galerii'],[s.events.length,'wydarzeń w archiwum']])}
-  ${seasonLayout(s)}
-  <section id="wyniki">${sectionTitle('Klasyfikacje końcowe','Top 10 · SL / GS · uczelnie K i M')}<p class="source-note">To wyniki całego sezonu. Rankingi uczelni pozostają oddzielne dla kobiet i mężczyzn. W 2016/17 sklasyfikowano tylko 8 uczelni mężczyzn.</p><div class="category-tabs" role="group" aria-label="Klasyfikacja">${categoryOrder.map(cat=>`<button data-category="${cat}" aria-pressed="${cat===activeCategory}">${categoryLabels[cat]}</button>`).join('')}</div><div class="screen-table" id="active-result">${resultTable(s.classifications.find(c=>c.category===activeCategory))}</div><div class="print-only">${categoryOrder.map(cat=>resultTable(s.classifications.find(c=>c.category===cat),true)).join('')}</div></section>
-  <section id="relacje">${sectionTitle('Co działo się w tym sezonie?','Streszczenia redakcyjne + oryginały NTN')}${articleCards(s.articles)}${s.articleIndex.length?`<details class="panel"><summary>Więcej odnalezionych materiałów NTN (${s.articleIndex.length})</summary><ul class="link-list">${s.articleIndex.map(a=>`<li>${link(a.url,a.title)}<small>${e(a.published || a.date || '')} · indeks uzupełniający; nie każdy materiał ma opracowane streszczenie</small></li>`).join('')}</ul></details>`:''}</section>
-  <section id="galerie">${sectionTitle('Edycje i zdjęcia','Najpierw kalendarz, potem albumy')}${eventTable(s)}${sectionTitle('Katalog galerii','Link ≠ gotowy wybór zdjęć do druku')}${galleryTable(s)}</section>
-  <section id="plan">${sectionTitle('Co chcemy opowiedzieć?','Pomysły do rozmowy, nie gotowy tekst')}
+  return `<section id="plan">${sectionTitle('Co chcemy opowiedzieć?','Pomysły do rozmowy, nie gotowy tekst')}
   <div class="two-col"><div class="panel"><h3>Tropy z przeczytanych relacji</h3>${angles.length?list(angles):'<p>Po lekturze zapiszcie najważniejszy konflikt sportowy, przełom albo scenę z tego sezonu.</p>'}${suggestedPeople.length?`<p class="source-note">Nazwiska pojawiające się w materiałach: ${suggestedPeople.map(e).join(', ')}.</p>`:''}<p class="source-note">To propozycje tematów, które wymagają Waszej pamięci i rozmów z uczestnikami.</p>${s.interviewCandidates.length?`<p class="source-note">Z Waszej kolejki rozmów: ${s.interviewCandidates.map(e).join(', ')}. Przypisanie do sezonu do ustalenia.</p>`:''}${s.editorialQuestions.length?`<details><summary>Pytania robocze do rozmów</summary>${list(s.editorialQuestions)}</details>`:''}</div><div class="panel"><h3>Do uzupełnienia w archiwum</h3>${gaps.length?list(gaps.slice(0,5)):'<p>Źródła znalezione. Kolejny etap: korekta, wspomnienia i wybór zdjęć.</p>'}${gaps.length>5?`<details><summary>Pozostałe braki (${gaps.length-5})</summary>${list(gaps.slice(5))}</details>`:''}</div></div>
-  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${seasonInterviewField(s)}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>
-  <nav class="previous-next" aria-label="Sąsiednie sezony">${index>0?`<a href="#${D.seasons[index-1].id}">← ${e(D.seasons[index-1].label)}</a>`:'<a href="#start">← Przegląd</a>'}${index<D.seasons.length-1?`<a href="#${D.seasons[index+1].id}">${e(D.seasons[index+1].label)} →</a>`:'<a href="#jubileusz">Rozdział jubileuszowy →</a>'}</nav>`;
+  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${seasonInterviewField(s)}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>`;
+}
+function seasonPage(s,selected='uklad') {
+  const index=D.seasons.indexOf(s);
+  const content=selected==='uklad'?seasonLayout(s):selected==='tresc'?seasonNotes(s):seasonArchive(s);
+  return `<header class="season-head"><div><span class="eyebrow">KARTA SEZONU / ${e(s.roman)} EDYCJA</span><h1>${e(s.label)}</h1><p class="description">${e(s.workingAngle || 'Kronika wyników i punkt wyjścia do wspomnień. Przejrzyj materiały, potem dopisz, co warto opowiedzieć.')}</p><span class="pill plan">${e(planning[s.id]?.status || 'Zbieramy materiały')}</span></div><div class="season-number" aria-hidden="true">${e(s.roman)}</div></header>
+  <div class="season-tabs" role="tablist" aria-label="Widok sezonu">${seasonTabs.map((tab,i)=>`<button type="button" role="tab" id="${s.id}-tab-${tab.id}" data-season-tab="${tab.id}" aria-selected="${tab.id===selected}" aria-controls="${s.id}-panel-${tab.id}" tabindex="${tab.id===selected?0:-1}"><span class="season-tab-number" aria-hidden="true">0${i+1}</span><span>${e(tab.label)}</span></button>`).join('')}</div>
+  ${seasonTabs.map(tab=>`<div class="season-tab-panel" role="tabpanel" id="${s.id}-panel-${tab.id}" aria-labelledby="${s.id}-tab-${tab.id}" tabindex="0" ${tab.id===selected?'':'hidden'}>${tab.id===selected?content:''}</div>`).join('')}
+  <nav class="previous-next" aria-label="Sąsiednie sezony">${index>0?`<a href="#${D.seasons[index-1].id}:${selected}">← ${e(D.seasons[index-1].label)}</a>`:'<a href="#start">← Przegląd</a>'}${index<D.seasons.length-1?`<a href="#${D.seasons[index+1].id}:${selected}">${e(D.seasons[index+1].label)} →</a>`:'<a href="#jubileusz">Rozdział jubileuszowy →</a>'}</nav>`;
 }
 function introPage() {
   return `<span class="eyebrow">OTWARCIE ALBUMU</span><h1 class="route-title">Zanim zaczniemy<br><em>kolejny przejazd.</em></h1><p class="muted">Robocza koncepcja wstępu i rytmu sezonów. Zdjęcia zastępują miejsca do późniejszego wyboru z archiwum Michała Szyplińskiego.</p>
@@ -241,9 +260,9 @@ function interviewPersonPage(person) {
   const seasons=person.seasons.map(id=>D.seasons.find(s=>s.id===id));
   return `<a class="back-link" href="#rozmowy">← Do przepytania</a><header class="interview-person-header"><span class="eyebrow">KARTA WYWIADU</span><h1 class="route-title">${e(person.name)}</h1><span class="pill plan" id="interview-person-status">${e(interviewStatus(person))}</span><p class="muted">${e(person.role || 'Pytania, wspomnienia i materiały do opracowania rozmowy.')}</p></header>
   ${sectionTitle('Sezony do omówienia',seasons.length?'Połączone automatycznie z planami sezonów':'Przypisz osobę w planie wybranego sezonu')}
-  <div class="person-chip-list interview-season-links">${seasons.length?seasons.map(s=>`<a class="person-chip" href="#${e(s.id)}:plan">${e(s.label)} <span>→ plan sezonu</span></a>`).join(''):'<p class="source-note">Ta karta nie ma jeszcze przypisanego sezonu. Pytania i notatki możesz przygotować już teraz.</p>'}</div>
+  <div class="person-chip-list interview-season-links">${seasons.length?seasons.map(s=>`<a class="person-chip" href="#${e(s.id)}:tresc">${e(s.label)} <span>→ plan sezonu</span></a>`).join(''):'<p class="source-note">Ta karta nie ma jeszcze przypisanego sezonu. Pytania i notatki możesz przygotować już teraz.</p>'}</div>
   <div class="planning interview-notebook"><h2>Przygotowanie i zapis rozmowy</h2><p class="source-note">Zapis lokalny i eksport działają tak samo jak w planach sezonów. Dane tej osoby są wspólne dla wszystkich przypisanych sezonów.</p><div class="fields-grid">${field(scope,'interviewStatus','Status rozmowy','','select')}${field(scope,'interviewLead','Kto prowadzi?','Ty / Antoni / Adam / Kuba','input')}${field(scope,'interviewDate','Termin rozmowy','Data, godzina lub robocze ustalenie','input')}${field(scope,'interviewTopics','Tematy i kontekst','O czym chcemy porozmawiać? Jakie sezony, wydarzenia lub zdjęcia pokazać?')}${field(scope,'interviewQuestions','Pytania do wywiadu','Wpisz pytania, najlepiej po jednym w wierszu.')}${field(scope,'interviewNotes','Odpowiedzi i notatki z rozmowy','Zapis rozmowy, anegdoty, szczegóły do sprawdzenia i nazwiska innych świadków.')}${field(scope,'interviewQuotes','Cytaty i fragmenty do albumu','Wybrane wypowiedzi, kontekst oraz miejsce w albumie.')}${field(scope,'interviewFollowup','Dalsze kroki','O co dopytać? Jakie zdjęcia lub dokumenty ma dosłać rozmówca?')}</div></div>
-  ${seasons.length?`${sectionTitle('Kontekst z planów sezonów','Materiały pomocnicze do wywiadu')}${seasons.map(s=>`<details class="panel interview-season-context"><summary>${e(s.label)} · pytania i tropy</summary>${planning[s.id]?.questions?`<h3>Pytania zapisane w planie sezonu</h3><p class="note-readonly">${e(planning[s.id].questions)}</p>`:''}${planning[s.id]?.memories?`<h3>Wspomnienia z planu</h3><p class="note-readonly">${e(planning[s.id].memories)}</p>`:''}${s.editorialQuestions.length?`<h3>Robocze pytania na podstawie relacji</h3>${list(s.editorialQuestions)}`:''}<p class="source-note"><a href="#${e(s.id)}:relacje">Przejdź do relacji i galerii sezonu →</a></p></details>`).join('')}`:''}
+  ${seasons.length?`${sectionTitle('Kontekst z planów sezonów','Materiały pomocnicze do wywiadu')}${seasons.map(s=>`<details class="panel interview-season-context"><summary>${e(s.label)} · pytania i tropy</summary>${planning[s.id]?.questions?`<h3>Pytania zapisane w planie sezonu</h3><p class="note-readonly">${e(planning[s.id].questions)}</p>`:''}${planning[s.id]?.memories?`<h3>Wspomnienia z planu</h3><p class="note-readonly">${e(planning[s.id].memories)}</p>`:''}${s.editorialQuestions.length?`<h3>Robocze pytania na podstawie relacji</h3>${list(s.editorialQuestions)}`:''}<p class="source-note"><a href="#${e(s.id)}:archiwum">Przejdź do relacji i galerii sezonu →</a></p></details>`).join('')}`:''}
   <nav class="previous-next"><a href="#rozmowy">← Wszyscy rozmówcy</a></nav>`;
 }
 function anniversaryPage() {
@@ -291,11 +310,12 @@ function route() {
   let key='';try{key=decodeURIComponent(section || '');}catch{}
   const person=id==='osoba'?interviewPeople().find(p=>p.key===key):null;
   const pages={start:overview,wstep:introPage,rozmowy:interviewsPage,jubileusz:anniversaryPage,hall:hallPage};
-  main.innerHTML=id==='osoba'?interviewPersonPage(person):s?seasonPage(s):(pages[id] || overview)();
+  main.innerHTML=id==='osoba'?interviewPersonPage(person):s?seasonPage(s,seasonTab(section)):(pages[id] || overview)();
   document.title=`${id==='osoba'?(person?.name || 'Karta wywiadu'):s?s.label:({wstep:'Wstęp',rozmowy:'Do przepytania',jubileusz:'Jubileusz',hall:'Hall of Fame'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
   renderNav();
-  if(section && ['uklad','wyniki','relacje','galerie','plan'].includes(section)) requestAnimationFrame(()=>document.getElementById(section)?.scrollIntoView());
-  else window.scrollTo({top:0});
+  window.scrollTo({top:0});
+  if(s && pendingSeasonTabFocus?.season===s.id)document.getElementById(`${s.id}-tab-${pendingSeasonTabFocus.tab}`)?.focus({preventScroll:true});
+  pendingSeasonTabFocus=null;
 }
 function download(filename, data) {
   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'});
@@ -309,6 +329,8 @@ document.querySelector('#season-search').addEventListener('input',renderNav);
 document.querySelector('.skip').addEventListener('click',ev=>{ev.preventDefault();main.focus();});
 document.querySelector('#import-trigger').addEventListener('click',()=>document.querySelector('#import').click());
 main.addEventListener('click',ev=>{
+  const seasonButton=ev.target.closest('[data-season-tab]');
+  if(seasonButton){openSeasonTab(seasonButton);return;}
   const layoutButton=ev.target.closest('[data-layout]');
   if(layoutButton){
     const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);
@@ -322,6 +344,14 @@ main.addEventListener('click',ev=>{
   const button=ev.target.closest('[data-category]');
   if(button){activeCategory=button.dataset.category;const s=D.seasons.find(s=>s.id===location.hash.slice(1).split(':')[0]);if(!s)return;document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===activeCategory)));document.querySelector('#active-result').innerHTML=resultTable(s.classifications.find(c=>c.category===activeCategory));}
   if(ev.target.closest('#download-research')) download('azs-wintercup-materialy-2026-11-05.json',D);
+});
+main.addEventListener('keydown',ev=>{
+  const button=ev.target.closest('[data-season-tab]');
+  if(!button || !['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
+  const buttons=[...main.querySelectorAll('[data-season-tab]')];
+  const current=buttons.indexOf(button);
+  const next=ev.key==='Home'?0:ev.key==='End'?buttons.length-1:(current+(ev.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;
+  ev.preventDefault();openSeasonTab(buttons[next]);
 });
 main.addEventListener('input',ev=>{
   const t=ev.target;if(!t.dataset.field)return;
