@@ -1,0 +1,971 @@
+{
+  "scope": "2002/03–2011/12; baza historyczna, bez aktualizacji późniejszych sezonów",
+  "source": "Album X-lecia AZS Winter Cup, 2013, PDF s. 38–39 (druk s. 36–37)",
+  "source_reference": "Pierwszy album dostarczony przez redakcję; oryginał nie jest publikowany w repozytorium.",
+  "methodology_note": "Przypis źródła: w 2004/05 i 2005/06 liczony wynik dwuboju slalomowego; w pozostałych sezonach osobno slalom gigant i slalom.",
+  "status": "Odczyt sum z historycznego PDF; przed drukiem kontrola nazw i identyfikacja zmian nazwisk.",
+  "tables": [
+    {
+      "gender": "M",
+      "rows": [
+        {
+          "place": 1,
+          "name": "Adam Wójtowicz",
+          "gold": 15,
+          "silver": 14,
+          "bronze": 15,
+          "total": 44
+        },
+        {
+          "place": 2,
+          "name": "Mateusz Habrat",
+          "gold": 14,
+          "silver": 7,
+          "bronze": 1,
+          "total": 22
+        },
+        {
+          "place": 3,
+          "name": "Wojciech Szczepanik",
+          "gold": 11,
+          "silver": 12,
+          "bronze": 3,
+          "total": 26
+        },
+        {
+          "place": 4,
+          "name": "Krzysztof Czaiński",
+          "gold": 7,
+          "silver": 2,
+          "bronze": 4,
+          "total": 13
+        },
+        {
+          "place": 5,
+          "name": "Michał Pawlas",
+          "gold": 5,
+          "silver": 1,
+          "bronze": 8,
+          "total": 14
+        },
+        {
+          "place": 6,
+          "name": "Filip Rzepecki",
+          "gold": 5,
+          "silver": 1,
+          "bronze": 0,
+          "total": 6
+        },
+        {
+          "place": 7,
+          "name": "Maciej Kominko",
+          "gold": 4,
+          "silver": 2,
+          "bronze": 2,
+          "total": 8
+        },
+        {
+          "place": 8,
+          "name": "Wojciech Podgórny",
+          "gold": 4,
+          "silver": 0,
+          "bronze": 0,
+          "total": 4
+        },
+        {
+          "place": 9,
+          "name": "Michał Szypliński",
+          "gold": 3,
+          "silver": 3,
+          "bronze": 5,
+          "total": 11
+        },
+        {
+          "place": 10,
+          "name": "Jacek Rojewski",
+          "gold": 2,
+          "silver": 2,
+          "bronze": 2,
+          "total": 6
+        },
+        {
+          "place": 11,
+          "name": "Bartłomiej Witowski",
+          "gold": 2,
+          "silver": 1,
+          "bronze": 2,
+          "total": 5
+        },
+        {
+          "place": 12,
+          "name": "Jakub Gałaszek",
+          "gold": 2,
+          "silver": 0,
+          "bronze": 1,
+          "total": 3
+        },
+        {
+          "place": 13,
+          "name": "Michał Hellmann",
+          "gold": 1,
+          "silver": 3,
+          "bronze": 1,
+          "total": 5
+        },
+        {
+          "place": 13,
+          "name": "Piotr Kalisz",
+          "gold": 1,
+          "silver": 3,
+          "bronze": 1,
+          "total": 5
+        },
+        {
+          "place": 15,
+          "name": "Grzegorz Axentowicz",
+          "gold": 1,
+          "silver": 2,
+          "bronze": 1,
+          "total": 4
+        },
+        {
+          "place": 15,
+          "name": "Maciej Stanisławski",
+          "gold": 1,
+          "silver": 2,
+          "bronze": 1,
+          "total": 4
+        },
+        {
+          "place": 17,
+          "name": "Jakub Hładowczak",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 4,
+          "total": 6
+        },
+        {
+          "place": 18,
+          "name": "Leszek Knoll",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 1,
+          "total": 3
+        },
+        {
+          "place": 19,
+          "name": "Andrzej Olczak",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 20,
+          "name": "Karol Miśkowiec",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 2,
+          "total": 3
+        },
+        {
+          "place": 21,
+          "name": "Rafał Szymura",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 22,
+          "name": "Tomasz Dziedzicki",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 22,
+          "name": "Piotr Górka",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 22,
+          "name": "Błażej Kalisz",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 22,
+          "name": "Jacek Mieszczak",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 22,
+          "name": "Michał Regiel",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 27,
+          "name": "Kasper Leonowicz",
+          "gold": 0,
+          "silver": 6,
+          "bronze": 6,
+          "total": 12
+        },
+        {
+          "place": 28,
+          "name": "Grzegorz Kurek",
+          "gold": 0,
+          "silver": 5,
+          "bronze": 0,
+          "total": 5
+        },
+        {
+          "place": 29,
+          "name": "Łukasz Kotuchna",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 3,
+          "total": 5
+        },
+        {
+          "place": 30,
+          "name": "Jan Sołtys",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 3,
+          "total": 5
+        },
+        {
+          "place": 31,
+          "name": "Witold Danecki",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 32,
+          "name": "Michał Rajzer",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 3,
+          "total": 4
+        },
+        {
+          "place": 33,
+          "name": "Ludwik Sierpiński",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3
+        },
+        {
+          "place": 33,
+          "name": "Marcin Wilczkiewicz",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3
+        },
+        {
+          "place": 35,
+          "name": "Adam Krawczyk",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 35,
+          "name": "Robert Kubala",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 35,
+          "name": "Jakub Stryjewski",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 38,
+          "name": "Wojciech Bronowski",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Lech Gurbiel",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Jan Marcinkowski",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Maciej Nieć",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Michał Przeciechowski",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Kacper Puszkiel",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 38,
+          "name": "Mikołaj Żukowski",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 45,
+          "name": "Andrzej Marasek",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 2,
+          "total": 2
+        },
+        {
+          "place": 46,
+          "name": "Łukasz Bielecki",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Maciej Bulanda",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Grzegorz Całko",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Maciej Chylewski",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Maciej Głowacki",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Krzysztof Kania",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Aleksander Ostrowski",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Filip Peliszko",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 46,
+          "name": "Aleksander Pobikrowski",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        }
+      ]
+    },
+    {
+      "gender": "K",
+      "rows": [
+        {
+          "place": 1,
+          "name": "Karolina Klimek",
+          "gold": 28,
+          "silver": 9,
+          "bronze": 4,
+          "total": 41
+        },
+        {
+          "place": 2,
+          "name": "Marta Berezik",
+          "gold": 10,
+          "silver": 5,
+          "bronze": 0,
+          "total": 15
+        },
+        {
+          "place": 3,
+          "name": "Hanna Majlert",
+          "gold": 7,
+          "silver": 8,
+          "bronze": 3,
+          "total": 18
+        },
+        {
+          "place": 4,
+          "name": "Katarzyna Leszczyńska",
+          "gold": 6,
+          "silver": 9,
+          "bronze": 4,
+          "total": 19
+        },
+        {
+          "place": 5,
+          "name": "Anna Berezik",
+          "gold": 6,
+          "silver": 3,
+          "bronze": 1,
+          "total": 10
+        },
+        {
+          "place": 6,
+          "name": "Agnieszka Bernas",
+          "gold": 5,
+          "silver": 5,
+          "bronze": 6,
+          "total": 16
+        },
+        {
+          "place": 7,
+          "name": "Dorota Siedlecka",
+          "gold": 5,
+          "silver": 1,
+          "bronze": 3,
+          "total": 9
+        },
+        {
+          "place": 8,
+          "name": "Urszula Horeczy",
+          "gold": 3,
+          "silver": 3,
+          "bronze": 9,
+          "total": 15
+        },
+        {
+          "place": 9,
+          "name": "Gabriela Bukowska",
+          "gold": 3,
+          "silver": 1,
+          "bronze": 0,
+          "total": 4
+        },
+        {
+          "place": 10,
+          "name": "Magdalena Rumińska",
+          "gold": 3,
+          "silver": 0,
+          "bronze": 0,
+          "total": 3
+        },
+        {
+          "place": 11,
+          "name": "Anna Czempiel",
+          "gold": 2,
+          "silver": 0,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 12,
+          "name": "Zuzanna Małysa",
+          "gold": 1,
+          "silver": 5,
+          "bronze": 3,
+          "total": 9
+        },
+        {
+          "place": 13,
+          "name": "Karolina Mrózek",
+          "gold": 1,
+          "silver": 4,
+          "bronze": 2,
+          "total": 7
+        },
+        {
+          "place": 14,
+          "name": "Małgorzata Klepacka",
+          "gold": 1,
+          "silver": 2,
+          "bronze": 4,
+          "total": 7
+        },
+        {
+          "place": 15,
+          "name": "Aleksandra Kania",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 1,
+          "total": 3
+        },
+        {
+          "place": 16,
+          "name": "Małgorzata Cholawo",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 17,
+          "name": "Katarzyna Mrowca",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 17,
+          "name": "Agnieszka Schwenk",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 17,
+          "name": "Katarzyna Urban",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 20,
+          "name": "Anna Dyląg",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 20,
+          "name": "Anna Kołder",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 20,
+          "name": "Anna Sośnicka",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 23,
+          "name": "Hanna Łaszcz",
+          "gold": 0,
+          "silver": 4,
+          "bronze": 3,
+          "total": 7
+        },
+        {
+          "place": 24,
+          "name": "Magdalena Sołtys",
+          "gold": 0,
+          "silver": 3,
+          "bronze": 4,
+          "total": 7
+        },
+        {
+          "place": 25,
+          "name": "Alicja Gruhn",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 25,
+          "name": "Marta Herda",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2
+        },
+        {
+          "place": 27,
+          "name": "Hanna Głowacka",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3
+        },
+        {
+          "place": 27,
+          "name": "Magdalena Stylińska",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3
+        },
+        {
+          "place": 29,
+          "name": "Katarzyna Leonowicz",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 29,
+          "name": "Agnieszka Pejko",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 29,
+          "name": "Anna Rajpold",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 29,
+          "name": "Weronika Wierusz",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 29,
+          "name": "Katarzyna Zawarska",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2
+        },
+        {
+          "place": 34,
+          "name": "Dominika Derżecka",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Justyna Dziedzicka",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Marta Gałdyś",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Klaudia Górecka",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Magdalena Jarosik",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Fabiana Klofik",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Zuzanna Koprowska",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Małgorzata Michalik",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Edyta Nizioł",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Agata Siudak",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 34,
+          "name": "Monika Zielińska",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1
+        },
+        {
+          "place": 45,
+          "name": "Marta Bosiak",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 4,
+          "total": 4
+        },
+        {
+          "place": 46,
+          "name": "Magdalena Lipińska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 3,
+          "total": 3
+        },
+        {
+          "place": 46,
+          "name": "Monika Mikołajek",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 3,
+          "total": 3
+        },
+        {
+          "place": 48,
+          "name": "Ewa Axentowicz",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Ewa Bursztyńska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Iwona Gabriel",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Karolina Gaweł",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Zofia Gurba",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Katarzyna Iwińska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Katarzyna Jaszowska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Katarzyna Kłopocińska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Katarzyna Małysa",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Beata Matejczyk",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Anna Mondzelewska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Olga Pluta",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Marta Ryłko",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Agnieszka Sikorska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Alicja Stępniewska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Katarzyna Szymczyk",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Anita Tabaszewska",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        },
+        {
+          "place": 48,
+          "name": "Alicja Zastawna",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1
+        }
+      ]
+    }
+  ]
+}

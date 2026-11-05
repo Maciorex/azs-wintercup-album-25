@@ -1,0 +1,1265 @@
+[
+  {
+    "season": "2012/13",
+    "articles": [
+      {
+        "title": "AZS Winter Cup: Ilewicz wygrywa samochód",
+        "url": "https://www.ntn.pl/azs-winter-cup-ilewicz-wygrywa-samochod/",
+        "published": "2013-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Jakub Ilewicz zapewnił sobie nagrodę samochodową już po gigancie, choć tę konkurencję w finale wygrał Kasper Leonowicz. Katarzyna Leszczyńska i Karolina Klimek podzieliły między siebie końcowe zwycięstwa kobiet w gigancie i slalomie. Relacja opisuje także trudne warunki na Harendzie i oczekiwanie na odbywający się następnego dnia Puchar X-lecia.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Jakub Ilewicz",
+          "Katarzyna Leszczyńska",
+          "Karolina Klimek",
+          "Kasper Leonowicz"
+        ],
+        "story_angles": [
+          "Ilewicz: pierwszy wygrany samochód i presja finału",
+          "Pierwszy sezon po granicy poprzedniego tomu; spotkanie pokoleń na X-leciu"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "Ostatnie gadające głowy – Puchar X-lecia AZS Winter Cup",
+        "url": "https://www.ntn.pl/ostatnie-gadajace-glowy-puchar-x-lecia-azs-winter-cup/",
+        "published": "2013-04-08",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Puchar X-lecia",
+        "type": "wideo — opis przeczytany, film do obejrzenia",
+        "summary": "Opis odcinka zapowiada rozmowy z weteranami Pucharu X-lecia: Agnieszką Bernas, Jackiem Rojewskim i Maciejem Chylewskim. Autor odsyła także do galerii oraz filmu z występów Dirty Riffz i D.I.CH.O.S. To materiał do szukania bohaterów i atmosfery jubileuszu; sam film wymaga jeszcze obejrzenia i spisania wypowiedzi.",
+        "status": "opis publikacji przeczytany; wideo do obejrzenia",
+        "people": [
+          "Agnieszka Bernas",
+          "Jacek Rojewski",
+          "Maciej Chylewski",
+          "Michał Szypliński"
+        ],
+        "story_angles": [
+          "Co zostało po pierwszej dekadzie?",
+          "Weterani jako pomost między tomami"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Jakub Ilewicz",
+      "Karolina Klimek"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Jakub: czy po gigancie naprawdę odpuściły nerwy związane z nagrodą samochodową? Co pamiętasz z pierwszych minut po rozstrzygnięciu?",
+      "Kasia i Karolina: jak wspominacie podział zwycięstw w slalomie i gigancie oraz walkę o samochód?",
+      "Które spotkanie z weteranami na Pucharze X-lecia najlepiej łączy pierwszy album z nowym tomem?"
+    ]
+  },
+  {
+    "season": "2013/14",
+    "articles": [
+      {
+        "title": "Jakub Ilewicz i Anna Berezik najlepsi w AZS Winter Cup",
+        "url": "https://www.ntn.pl/azs-wc-jakub-ilewicz-i-anna-berezik-najlepszymi-alpejczykami-wsrod-studentow/",
+        "published": "2014-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Anna Berezik i Jakub Ilewicz zakończyli sezon ze zwycięstwami w obu klasyfikacjach generalnych. Ilewicz wygrał dziesiąte zawody z rzędu i drugi rok po roku odebrał samochód. Relacja zestawia tę sportową dominację z wiosenną Harendą, problemami pomiaru czasu i trasą niszczejącą do błota.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Anna Berezik",
+          "Jakub Ilewicz",
+          "Karolina Klimek",
+          "Andrzej Bachleda-Curuś"
+        ],
+        "story_angles": [
+          "Jak zachować motywację, gdy wygrywa się wszystko?",
+          "Zawody na granicy śniegu: perspektywa zawodników i ekipy technicznej"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Jakub Ilewicz",
+      "Anna Berezik"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Jakub: czy drugi wygrany samochód smakował inaczej niż pierwszy i czy seria zwycięstw zwiększała presję?",
+      "Anna: jak oceniasz sezon z dwiema kulami, ale bez głównej nagrody?",
+      "Jak ekipa techniczna ratowała finałową trasę, gdy spod śniegu wychodziła ziemia?"
+    ]
+  },
+  {
+    "season": "2014/15",
+    "articles": [
+      {
+        "title": "AZS WC: Strzał w dziesiątkę Agnieszki Gąsienicy Gładczan",
+        "url": "https://www.ntn.pl/azs-wc-strzal-w-dziesiatke-agnieszki-gasienicy-gladczan/",
+        "published": "2015-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Agnieszka Gąsienica Gładczan zakończyła serię dziesięciu zwycięstw i zdobyła volkswagena up, a Jakub Ilewicz wygrał obie męskie klasyfikacje. Sezon zaczął się dopiero w styczniu z powodu braku śniegu, zaś finał na Harendzie znów wystawił zawodników na trudne wiosenne warunki. W klasyfikacjach uczelnianych najlepsze były kobiety z AWF Katowice i mężczyźni z AGH Kraków.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Agnieszka Gąsienica Gładczan",
+          "Jakub Ilewicz",
+          "Karol Miśkowiec",
+          "Katarzyna Ostrowska"
+        ],
+        "story_angles": [
+          "Agnieszka: przejście z kariery kadrowej do akademickiej rywalizacji",
+          "Sportowa dominacja i emocje ludzi tuż za podium"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Jakub Ilewicz"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Agnieszka: jak przejście z kadry narodowej do akademickiego cyklu zmieniło Twoją radość ze ścigania?",
+      "Jak wyglądało czekanie na finałowy slalom, kiedy do wygrania samochodu brakowało jednego udanego startu?",
+      "Karol: co pamiętasz z finałowego giganta i sytuacji, w której jeden błąd zmienił końcowe podium?"
+    ]
+  },
+  {
+    "season": "2015/16",
+    "articles": [
+      {
+        "title": "AZS WC: dominacja Berezik i Habrata w wielkim finale",
+        "url": "https://www.ntn.pl/azs-wc-dominacja-berezik-i-habrata-w-wielkim-finale/",
+        "published": "2016-02-28",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Anna Berezik i Mateusz Habrat wygrali obie konkurencje finału przeniesionego z Kasprowego Wierchu na Harendę. Wiatr i mgła uniemożliwiły start w pierwotnej lokalizacji, a na zastępczej trasie brakowało śniegu. Podsumowanie generalek miało dopiero poprzedzić osobny, nietypowy konkurs o Audi A1: zwyciężyć miał przejazd najbliższy czasowi wzorcowemu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Anna Berezik",
+          "Mateusz Habrat",
+          "Karolina Klimek",
+          "Aleksandra Malinowska"
+        ],
+        "story_angles": [
+          "Dlaczego finał nie odbył się na Kasprowym?",
+          "Nietypowy samochodowy konkurs w formule czasu wzorcowego"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Mateusz Habrat wygrywa Audi A1",
+        "url": "https://www.ntn.pl/azs-wc-mateusz-habrat-wygrywa-audi-a1/",
+        "published": "2016-03-03",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Konkurs o nagrodę główną",
+        "type": "relacja",
+        "summary": "Mateusz Habrat wygrał Audi A1 w dodatkowych zawodach dla dziesięciorga najlepszych uczestników cyklu. Nie chodziło o najszybszy przejazd, lecz o zbliżenie się do wyznaczonego czasu 38,92 s. Habrat poprawił rezultat Katarzyny Ostrowskiej o 0,09 s; relacja opisuje przygotowania i różne taktyki liczenia czasu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Mateusz Habrat",
+          "Katarzyna Ostrowska",
+          "Bartłomiej Całka"
+        ],
+        "story_angles": [
+          "Habrat: jak trenował liczenie sekund?",
+          "Kiedy nagroda główna zmienia zawody w widowisko"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Anna Berezik",
+      "Katarzyna Ostrowska"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Mateusz: jak trenowałeś odliczanie czasu do konkursu o Audi i czy w trakcie przejazdu kontrolowałeś zegar w głowie?",
+      "Kasia: jak wspominasz moment, kiedy wynik Habrata okazał się o 0,09 s bliższy wzorcowi?",
+      "Kto i kiedy zdecydował o zmianie finału z Kasprowego na Harendę i jakie były najbardziej nerwowe godziny organizacji?"
+    ]
+  },
+  {
+    "season": "2016/17",
+    "articles": [
+      {
+        "title": "AZS WC: Wielki finał bez niespodzianek",
+        "url": "https://www.ntn.pl/azs-wc-wielki-final-bez-niespodzianek/",
+        "published": "2017-02-27",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Finał 2016/17 zakończył się zwycięstwami Iwony Kohut i Antoniego Szczepanika w gigancie oraz Karoliny Klimek i Szymona Mitana w slalomie. Po sezonie sprawnie przeprowadzanych eliminacji nadejście odwilży zagroziło zakończeniu, jednak sobotni mróz pomógł uratować Harendę. Tekst opisuje różnicę między spokojem liderów z zapewnionymi trofeami a walką pozostałych o końcowe miejsca.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Iwona Kohut",
+          "Antoni Szczepanik",
+          "Karolina Klimek",
+          "Szymon Mitan",
+          "Przemysław Gałuszka"
+        ],
+        "story_angles": [
+          "Zima, w której eliminacje wreszcie odbywały się zgodnie z planem",
+          "Jak smakuje finał, gdy Kryształowa Kula jest już pewna?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Karolina Klimek"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Karolina i Przemek: jak jedzie się finał, mając już zapewnioną kulę w jednej konkurencji?",
+      "Co najbardziej pamiętacie z sezonu, w którym eliminacje wreszcie przebiegały zgodnie z planem?",
+      "Jak wspominacie powrót Winter Cup na Kasprowy po dziewięciu latach i czym ten start różnił się od innych?"
+    ]
+  },
+  {
+    "season": "2017/18",
+    "articles": [
+      {
+        "title": "AZS WC: niesamowity finał, niesamowite emocje. Kohut i Mitan zgarniają całą pulę!",
+        "url": "https://www.ntn.pl/azs-wc-niesamowity-final-niesamowite-emocje-kohut-i-mitan-zgarniaja-cala-pule/",
+        "published": "2018-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Iwona Kohut i Szymon Mitan zdobyli po dwie Kryształowe Kule, choć droga do tego sukcesu nie była jednakowa. Kontuzja Aleksandry Malinowskiej wpłynęła na układ walki kobiet, a pierwsze gigantowe zwycięstwo Wiktorii Gibiec stało się osobnym wydarzeniem finału. W męskiej klasyfikacji giganta Mitan i Antoni Szczepanik uzbierali po 650 punktów, co pokazuje skalę wyrównania rywalizacji.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Iwona Kohut",
+          "Szymon Mitan",
+          "Aleksandra Malinowska",
+          "Wiktoria Gibiec",
+          "Antoni Szczepanik"
+        ],
+        "story_angles": [
+          "Mitan i Szczepanik: sezon rozstrzygany przy identycznej liczbie punktów",
+          "Kontuzja Malinowskiej i pierwsze złoto Gibiec"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "Puchar XV-lecia AZS WC: magiczny dzień na Harendzie",
+        "url": "https://www.ntn.pl/puchar-xv-lecia-azs-wc-magiczny-dzien-na-harendzie/",
+        "published": "2018-03-08",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Puchar XV-lecia",
+        "type": "relacja",
+        "summary": "Jubileusz na Harendzie połączył aktualnych zawodników z uczestnikami pierwszych edycji, a sportowe ambicje mieszały się z radością spotkania dawnych znajomych. W dwuboju weteranów najlepsi byli Karolina Gaweł-Jurczyk i Jan Sołtys. Reportaż daje wiele tropów do opowieści o ludziach, którzy współtworzyli charakter Winter Cup, w tym o Macieju Żabskim i Adamie Mijakowskim.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Karolina Gaweł-Jurczyk",
+          "Jan Sołtys",
+          "Maciej Żabski",
+          "Adam Mijakowski",
+          "Kuba Gałaszek"
+        ],
+        "story_angles": [
+          "Co sprowadza weteranów z powrotem na start?",
+          "Od XV-lecia do XXV-lecia: porównać te same osoby i miejsca"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Szymon i Antoni: kiedy zrozumieliście, co oznacza remis 650:650 punktów w gigancie i który przepis rozstrzygał?",
+      "Aleksandra: jak wygląda oglądanie decydującego finału z kontuzją, gdy Twoje miejsce zależy już od innych?",
+      "Co Puchar XV-lecia pokazał o więziach między ludźmi, których nie widać w wynikach?"
+    ]
+  },
+  {
+    "season": "2018/19",
+    "articles": [
+      {
+        "title": "AZS WC: finał na raty, Kohut i Chrapek z Kryształowymi Kulami",
+        "url": "https://www.ntn.pl/azs-wc-final-na-raty-kohut-i-chrapek-z-krysztalowymi-kulami/",
+        "published": "2019-02-22",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał — slalom",
+        "type": "relacja",
+        "summary": "Deszcz wymusił rozdzielenie finału na dwa terminy i skrócenie slalomu do jednego przejazdu. Kryształowe Kule za slalom zdobyli Iwona Kohut i Adam Chrapek. Tekst pokazuje, jak szybko trudna nawierzchnia i pojedynczy błąd mogły zmienić pozostałe miejsca w klasyfikacji oraz obsadę późniejszego slalomu równoległego.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Iwona Kohut",
+          "Adam Chrapek",
+          "Helena Kubasiewicz",
+          "Maciej Żabski"
+        ],
+        "story_angles": [
+          "Finał na raty: decyzje o bezpieczeństwie i odwołaniu przejazdów",
+          "Co zmienia jeden przejazd zamiast dwóch?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Kubasiewicz i Chrapek wygrywają po 10000 zł w slalomie równoległym",
+        "url": "https://www.ntn.pl/azs-wc-kubasiewicz-i-chrapek-wygrywaja-po-10000-zl-w-slalomie-rownoleglym/",
+        "published": "2019-02-23",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy",
+        "type": "relacja",
+        "summary": "Helena Kubasiewicz i Adam Chrapek wygrali po 10 tys. zł w slalomie równoległym. Relacja podkreśla widowiskowość bezpośrednich pojedynków i emocje zgromadzonych na mecie. Rozgrywka stanowiła osobne wydarzenie pomiędzy przełożonymi częściami finału klasycznego cyklu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Helena Kubasiewicz",
+          "Adam Chrapek",
+          "Piotr Krawczyk",
+          "Przemysław Gałuszka"
+        ],
+        "story_angles": [
+          "Co duża jednorazowa nagroda robi z emocjami zawodników?",
+          "Początki współczesnej formuły równoległej"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: finał na lodowej trasie, Kubasiewicz i Szczepanik tryumfują w klasyfikacji gigantowej",
+        "url": "https://www.ntn.pl/azs-wc-final-na-lodowej-trasie-kubasiewicz-i-szczepanik-tryumfuja-w-klasyfikacji-gigantowej/",
+        "published": "2019-02-24",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał — gigant",
+        "type": "relacja",
+        "summary": "Przeniesienie giganta na niedzielę dało zawodnikom lodową trasę zamiast piątkowego deszczu. Helena Kubasiewicz i Antoni Szczepanik wykorzystali finał do zdobycia Kryształowych Kul w tej konkurencji. Cały sezon w klasyfikacji uczelni wygrały kobiety z UŚ Katowice i mężczyźni z AGH Kraków; reportaż notuje też pożegnanie Tomasza Kępy z akademickimi startami.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Helena Kubasiewicz",
+          "Antoni Szczepanik",
+          "Iwona Kohut",
+          "Tomasz Kępa"
+        ],
+        "story_angles": [
+          "Kubasiewicz: od piątkowej porażki do niedzielnego triumfu",
+          "Tomasz Kępa: ostatni akademicki finał"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Adam Chrapek"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Helena: jak przeżyłaś weekend od nieudanego slalomu do wygranej równoległej i kuli za gigant?",
+      "Co przesądziło o rozdzieleniu finału i jak zawodnicy przyjęli skrócenie slalomu?",
+      "Tomasz: jaki obraz z ostatniego akademickiego finału został Ci w pamięci?"
+    ]
+  },
+  {
+    "season": "2019/20",
+    "articles": [
+      {
+        "title": "AZS WC: Iwona Kohut i Adam Chrapek z Kryształowymi Kulami",
+        "url": "https://www.ntn.pl/azs-wc-iwona-kohut-i-adam-chrapek-z-krysztalowymi-kulami/",
+        "published": "2020-02-29",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Iwona Kohut i Adam Chrapek zdobyli Kryształowe Kule w obu konkurencjach, ale końcówka wymagała walki do ostatniego przejazdu. Na śnieżnej Harendzie ograniczono gigant do jednej próby ze względu na stan pokrywy. Dodatkowe użyczenie samochodów przypadło Kohut i Dominikowi Białobrzyckiemu, a relacja dokumentuje również filmowe podsumowanie Better Pictures.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Iwona Kohut",
+          "Adam Chrapek",
+          "Dominik Białobrzycki",
+          "Katarzyna Wąsek"
+        ],
+        "story_angles": [
+          "Podwójni zwycięzcy: dominacja widziana od środka",
+          "Ostatni zimowy finał przed pandemicznym przełomem — kontekst do ustalenia w rozmowie"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Wąsek i Białobrzycki wygrywają po 10 tysięcy złotych",
+        "url": "https://www.ntn.pl/azs-wc-wasek-i-bialobrzycki-wygrywaja-po-10-tysiecy-zlotych/",
+        "published": "2020-03-05",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy",
+        "type": "relacja",
+        "summary": "Katarzyna Wąsek i Dominik Białobrzycki wygrali po 10 tys. zł w slalomie równoległym zamykającym sezon 2019/20. To osobna historia sportowa uzupełniająca klasyfikacje slalomu i giganta. Do albumu warto zestawić tę relację z opisem finału, aby odróżnić zdobywców sezonowych Kryształowych Kul od zwycięzców jednego wydarzenia.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Katarzyna Wąsek",
+          "Dominik Białobrzycki"
+        ],
+        "story_angles": [
+          "Jak inaczej jedzie się w pojedynku niż na czas?",
+          "Wąsek i Białobrzycki: emocje walki o 10 tysięcy"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Adam Chrapek"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Iwona i Adam: czy podczas finału czuliście się już dominatorami sezonu, czy obawialiście się ostatniego przejazdu?",
+      "Kasia i Dominik: co najbardziej pamiętacie z walki o 10 tys. zł w równoległym?",
+      "Jak po czasie odbieracie ten finał na przełomie lutego i marca 2020? Kontekst pandemiczny trzeba potwierdzić w rozmowach, bez dopisywania go do samej relacji."
+    ]
+  },
+  {
+    "season": "2020/21",
+    "articles": [
+      {
+        "title": "AZS WC: Finał marzeń w Szczawnicy",
+        "url": "https://www.ntn.pl/azs-wc-final-marzen-w-szczawnicy/",
+        "published": "2021-02-26",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Przeniesienie finału z Harendy na Palenicę dało uczestnikom błękitne niebo i twardą, lodową trasę. Katarzyna Wąsek zakończyła dominujący sezon podwójnym zwycięstwem; u mężczyzn kule przypadły Norbertowi Wróblowi za gigant i Dominikowi Białobrzyckiemu za slalom. Reportaż opisuje liczenie punktów na mecie i walkę o miejsca, których nie rozstrzygnęły wcześniejsze eliminacje.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Katarzyna Wąsek",
+          "Norbert Wróbel",
+          "Dominik Białobrzycki",
+          "Mariusz Staszel"
+        ],
+        "story_angles": [
+          "Kasia Wąsek: sezon, w którym wszystko zagrało",
+          "Pandemiczny sezon: jak udało się go przeprowadzić? — temat do osobnej weryfikacji"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Katarzyna Wąsek i Paweł Jaksina wygrywają w slalomie równoległym",
+        "url": "https://www.ntn.pl/azs-wc-katarzyna-wasek-i-pawel-jaksina-wygrywaja-w-slalomie-rownoleglym/",
+        "published": "2021-02-27",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy",
+        "type": "relacja",
+        "summary": "Katarzyna Wąsek i Paweł Jaksina wygrali slalom równoległy w Czarnej Górze oraz nagrody po 10 tys. zł. Po lodowym finale w Szczawnicy zawodnicy musieli przestawić się na bardziej grząską nawierzchnię GrapaSki. Autor zwraca uwagę na równe ustawienie obu tras i znaczenie rankingu, który decydował o rozstawieniu par.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Katarzyna Wąsek",
+          "Paweł Jaksina",
+          "Katarzyna Ostrowska",
+          "Aleksandra Malinowska"
+        ],
+        "story_angles": [
+          "Jaksina: doświadczenie przeciw młodszym rywalom",
+          "Jak ustawić dwie sprawiedliwe trasy?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: AGH Kraków ma najlepszą drużynę",
+        "url": "https://www.ntn.pl/azs-wc-agh-krakow-ma-najlepsza-druzyne/",
+        "published": "2021-02-28",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Team Event",
+        "type": "relacja",
+        "summary": "Pierwszy drużynowy slalom równoległy w ramach Winter Cup zgromadził czteroosobowe reprezentacje ośmiu uczelni. W finale AGH Kraków pokonała Uniwersytet Jagielloński. Reportaż pokazuje kibicowanie, pracę zespołową i dodatkowe emocje pojawiające się wtedy, gdy wynik pojedynczego przejazdu wpływa na całą sekcję.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Juliusz Mitan",
+          "Jakub Jasiński"
+        ],
+        "story_angles": [
+          "Narodziny Team Eventu — kto wpadł na ten pomysł?",
+          "Pierwsza zwycięska ekipa AGH: odtworzyć skład i wspomnienia"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Juliusz Mitan"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Kasia: co pozwoliło utrzymać tak wysoką formę przez cały sezon?",
+      "Skąd wziął się pomysł pierwszego Team Eventu i czy od początku zakładaliście, że zostanie na stałe?",
+      "Jak przeprowadzono sezon w realiach pandemicznych: dostęp do stoków, treningi, podróże i organizacja? Potrzebujemy dokumentów i osobistych wspomnień."
+    ]
+  },
+  {
+    "season": "2021/22",
+    "articles": [
+      {
+        "title": "AZS WC: Smaczki finału",
+        "url": "https://www.ntn.pl/azs-wc-smaczki-finalu/",
+        "published": "2022-02-27",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Julia Włodarczyk, Antoni Szczepanik i Juliusz Mitan zdobyli główne trofea sezonu, a finał dostarczył raczej osobistych historii niż nagłych zmian klasyfikacji. Autor opisuje ostatni finał Szczepanika i różny podział sukcesów kobiet: wygraną Mai Chyli, końcowy sukces Włodarczyk oraz nagrodę samochodową Sabiny Majerczyk. W klasyfikacjach uczelnianych zwyciężyły kobiety z SUM Katowice i mężczyźni z AGH Kraków.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Julia Włodarczyk",
+          "Antoni Szczepanik",
+          "Juliusz Mitan",
+          "Maja Chyla",
+          "Sabina Majerczyk"
+        ],
+        "story_angles": [
+          "Szczepanik: pożegnanie z finałami",
+          "Trzy zawodniczki i trzy różne powody do radości"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Włodarczyk i Jaksina wygrali slalom równoległy",
+        "url": "https://www.ntn.pl/azs-wc-wlodarczyk-i-jaksina-wygrali-slalom-rownolegly/",
+        "published": "2022-03-04",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy",
+        "type": "relacja",
+        "summary": "Julia Włodarczyk i Paweł Jaksina zwyciężyli w równoległej rywalizacji w Czarnej Górze. Autor opisuje zmodyfikowane zasady przenoszenia straty z pierwszego przejazdu oraz znaczenie nagrody przypadającej wyłącznie zwycięzcom. Dla Włodarczyk był to kolejny sukces w debiutanckim sezonie, a dla Jaksiny obrona tytułu sprzed roku.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Julia Włodarczyk",
+          "Paweł Jaksina",
+          "Mateusz Rewerelli"
+        ],
+        "story_angles": [
+          "Wygrywanie w debiucie i obrona tytułu — dwa doświadczenia",
+          "Czy zmiana regulaminu poprawiła uczciwość pojedynków?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: UJ Kraków najlepszy w Polsce jest!",
+        "url": "https://www.ntn.pl/azs-wc-uj-krakow-najlepszy-w-polsce-jest/",
+        "published": "2022-03-06",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Team Event",
+        "type": "relacja",
+        "summary": "Uniwersytet Jagielloński wygrał drugą edycję Team Eventu, pokonując w finale AWF Kraków 5:3. Relacja opisuje formułę zespołów złożonych z dwóch kobiet i dwóch mężczyzn oraz przejazdy z zamianą tras. Materiał daje także tło organizacyjne: przewidywanie składów, nerwowe zastępstwa i znaczenie wspólnego dopingu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Mikołaj Chudzik"
+        ],
+        "story_angles": [
+          "UJ: jak zbudowano zwycięską drużynę?",
+          "Team Event jako historia sekcji, nie tylko liderów"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Julia: jak przeżyłaś debiut zakończony dwiema kulami i wygraną równoległą?",
+      "Antoni: co czułeś przed ostatnim finałem i które osoby chciałeś wtedy szczególnie pożegnać?",
+      "Maja, Julia i Sabina: jak z Waszej perspektywy wyglądał finał, w którym każda miała inny powód do radości?"
+    ]
+  },
+  {
+    "season": "2022/23",
+    "articles": [
+      {
+        "title": "AZS WC: Najciekawsze momenty finału",
+        "url": "https://www.ntn.pl/azs-wc-najciekawsze-momenty-finalu/",
+        "published": "2023-03-04",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Maja Chyla i Błażej Budz wygrali obie konkurencje finału w Szczawnicy i uzyskali nagrody samochodowe za najlepszy łączny czas. Główne sezonowe trofea przypadły Chyli, Pawłowi Jaksinie i Juliuszowi Mitanowi. Autor szuka historii poza samą tabelą: dawni mistrzowie wracają jako przedzjeżdżacze, a zawodnicy mówią o tym, jak trudno rozstać się z akademickimi startami.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Błażej Budz",
+          "Paweł Jaksina",
+          "Juliusz Mitan",
+          "Julia Włodarczyk"
+        ],
+        "story_angles": [
+          "Powrót mistrzów w innej roli",
+          "Co w życiu znika po zakończeniu startów?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Magiczny wieczór na Harendzie",
+        "url": "https://www.ntn.pl/azs-wc-magiczny-wieczor-na-harendzie/",
+        "published": "2023-03-06",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy i Team Event",
+        "type": "relacja",
+        "summary": "Nocne zawody na Harendzie przypomniały starszą tradycję finałów rozgrywanych po zmroku. Maja Chyla i Juliusz Mitan wygrali rywalizację indywidualną, a Uniwersytet Jagielloński część drużynową. Relacja notuje także niespodziewane eliminacje faworytów i finał mężczyzn rozstrzygnięty różnicą 0,09 s.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Juliusz Mitan",
+          "Michał Czerwiński",
+          "Michał Żyto"
+        ],
+        "story_angles": [
+          "Nocna Harenda: wrócić do podobnych zdjęć sprzed lat",
+          "Finał na dziewięć setnych sekundy"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Juliusz Mitan"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Co zmieniło się w atmosferze cyklu po wejściu Mai Chyli w rolę liderki?",
+      "Julia i dawni mistrzowie: jak wygląda start w roli przedzjeżdżacza, gdy już nie walczycie o klasyfikację?",
+      "Jak zapamiętaliście nocny finał równoległy na Harendzie i dziewięć setnych różnicy w ostatnim pojedynku?"
+    ]
+  },
+  {
+    "season": "2023/24",
+    "articles": [
+      {
+        "title": "Finał AZS WC: Kryształowy Hejmo i dramat Dulczewskiego",
+        "url": "https://www.ntn.pl/final-azs-wc-krysztalowy-hejmo-i-dramat-dulczewskiego/",
+        "published": "2024-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał",
+        "type": "relacja",
+        "summary": "Finał przeniesiony ze Szczawnicy na Harendę odbył się na resztkach śniegu i wymagał naprawiania trasy w trakcie zawodów. Maja Chyla ponownie zdobyła obie kule, a walka Stanisława Hejmo z Wojciechem Dulczewskim o gigant zakończyła się remisem punktowym rozstrzyganym regulaminem. Reportaż łączy sportowy zwrot z pożegnaniem Hejmo i Piotra Krawczyka z akademicką karierą.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Stanisław Hejmo",
+          "Wojciech Dulczewski",
+          "Maja Chyla",
+          "Piotr Krawczyk",
+          "Mariusz Staszel"
+        ],
+        "story_angles": [
+          "Hejmo i Dulczewski: dwa spojrzenia na ten sam finał",
+          "Zakończyć karierę kulą — Hejmo i Krawczyk o ostatnich przejazdach"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Duża kasa rozdana na Harendzie",
+        "url": "https://www.ntn.pl/azs-wc-duza-kasa-rozdana-na-harendzie/",
+        "published": "2024-03-04",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy i Team Event",
+        "type": "relacja",
+        "summary": "Maja Chyla i Wojciech Dulczewski wygrali po 10 tys. zł w slalomie równoległym, a najlepszą drużyną został Uniwersytet Warszawski. Odwilż stawiała pod znakiem zapytania dalszą eksploatację Harendy, ale przejazdy udało się przeprowadzić. Dla Dulczewskiego sukces był interesującym dopowiedzeniem wcześniejszego finału, w którym stracił szansę na Kryształową Kulę za gigant.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Wojciech Dulczewski",
+          "Zofia Zdort"
+        ],
+        "story_angles": [
+          "Dulczewski: od rozczarowania do wygranej w kilka dni",
+          "UW i budowanie mocnej sekcji drużynowej"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Streszczono wybrane materiały finałowe; relacje eliminacji są w osobnym indeksie i czekają na opracowanie.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Stanisław i Wojciech: opowiedzcie osobno, co widzieliście i liczyliście między metą finału a ogłoszeniem rozstrzygnięcia giganta.",
+      "Wojciech: czy zwycięstwo w równoległym kilka dni później zmieniło sposób, w jaki pamiętasz cały finał?",
+      "Stanisław i Piotr: dlaczego właśnie ten moment był dobry na pożegnanie z akademickimi startami?"
+    ]
+  },
+  {
+    "season": "2024/25",
+    "articles": [
+      {
+        "title": "AZS WC: Awaryjna zmiana miejsca i medale debiutantów",
+        "url": "https://www.ntn.pl/azs-wc-awaryjna-zmiana-miejsca-i-medale-debiutantow/",
+        "published": "2024-12-21",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "I eliminacje — Czarna Góra",
+        "type": "relacja",
+        "summary": "Brak śniegu na Harendzie przeniósł inaugurację sezonu do GrapaSki. Maja Chyla wygrała obie konkurencje, a u mężczyzn złota podzielili debiutant Kamil Koralewski i Michał Czerwiński. Autor odnotowuje 116 startujących, w tym 52 kobiety, oraz silne wejście Magdaleny Bańdo i Mai Woźniczki do akademickiej rywalizacji.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Kamil Koralewski",
+          "Michał Czerwiński",
+          "Magdalena Bańdo",
+          "Maja Woźniczka"
+        ],
+        "story_angles": [
+          "Nowe pokolenie po odejściu dotychczasowych liderów",
+          "Rosnąca frekwencja kobiet"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Slalomowa pułapka",
+        "url": "https://www.ntn.pl/azs-wc-slalomowa-pulapka/",
+        "published": "2025-01-11",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "II eliminacje — Harenda",
+        "type": "relacja",
+        "summary": "Kolejna zmiana lokalizacji przeniosła eliminacje z Rytra na Harendę. Maja Woźniczka wygrała gigant przed Mają Chylą o 0,12 s, Chyla zwyciężyła w slalomie, a Juliusz Mitan zdobył oba złota mężczyzn. Relacja pokazuje powrót na trudniejszy stok, znaczenie nocnego mrozu i sportową rywalizację dwóch Maj.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Maja Chyla",
+          "Juliusz Mitan",
+          "Zofia Zdort"
+        ],
+        "story_angles": [
+          "Woźniczka: pierwsza wygrana nad dominatorką",
+          "Slalomowe ustawienie i pułapki: rozmowa z ustawiaczem"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Kobiety zaczynają rządzić pucharem",
+        "url": "https://www.ntn.pl/azs-wc-kobiety-zaczynaja-rzadzic-pucharem/",
+        "published": "2025-01-26",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "III eliminacje — Zawoja",
+        "type": "relacja",
+        "summary": "Magdalena Bańdo wygrała obie konkurencje na Mosornym Groniu, a złotami mężczyzn podzielili się Kamil Koralewski i Juliusz Mitan. Po raz pierwszy w historii cyklu na starcie stanęło więcej kobiet niż mężczyzn. Relacja wskazuje aktywność sekcji UW pod kierunkiem Adrianny Borowik oraz szczególny charakter długiego giganta i mistrzostw Warszawy.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Magdalena Bańdo",
+          "Kamil Koralewski",
+          "Juliusz Mitan",
+          "Adrianna Borowik",
+          "Michał Żyto"
+        ],
+        "story_angles": [
+          "Borowik i UW: co naprawdę zwiększyło udział kobiet?",
+          "Długi gigant jako akademicki sprawdzian wytrzymałości"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Powrót po 16 latach",
+        "url": "https://www.ntn.pl/azs-wc-powrot-po-16-latach/",
+        "published": "2025-02-08",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "IV eliminacje — Jurgów",
+        "type": "relacja",
+        "summary": "Winter Cup wrócił do Jurgowa po szesnastu latach. Magdalena Bańdo zdobyła dwa kolejne złota, a u mężczyzn wygrywali Bartłomiej Sanetra i Juliusz Mitan. Autor porównuje dawny ośrodek z obecnymi trasami i opisuje mniejszą frekwencję w czasie ferii, gdy część uczestników zarabia na wyjazdach narciarskich.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Magdalena Bańdo",
+          "Bartłomiej Sanetra",
+          "Juliusz Mitan"
+        ],
+        "story_angles": [
+          "Jurgów wtedy i dziś: zestawienie fotografii 2009 i 2025",
+          "Jak studenci finansują treningi i starty?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: „Topór” z wymarzonym medalem",
+        "url": "https://www.ntn.pl/azs-wc-topor-z-wymarzonym-medalem/",
+        "published": "2025-02-22",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "V eliminacje — Kluszkowce",
+        "type": "relacja",
+        "summary": "Magdalena Bańdo i Juliusz Mitan wygrali obie konkurencje ostatnich eliminacji. Osobną historią stał się pierwszy medal Jakuba Toporowskiego. Powrót do Kluszkowiec przyniósł ponad stu startujących, bardzo dobrą twardą trasę i sprawnie przeprowadzone zawody, w kontraście do wcześniejszych pogodowych komplikacji sezonu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Magdalena Bańdo",
+          "Juliusz Mitan",
+          "Jakub Toporowski",
+          "Mariusz Staszel"
+        ],
+        "story_angles": [
+          "Toporowski: ile sezonów czekał na pierwszy medal?",
+          "Ludzie od sprawnego przeprowadzenia zawodów — S-Time"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "Finał AZS WC: Bez sensacji i dramatów",
+        "url": "https://www.ntn.pl/final-azs-wc-doswiadczenie-i-swieza-krew/",
+        "published": "2025-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał — Szczawnica",
+        "type": "relacja",
+        "summary": "Maja Chyla wygrała klasyfikację giganta, Magdalena Bańdo slalomu, a Juliusz Mitan obie męskie generalki. Deszczowy finał na Palenicy zgromadził 61 zawodników, ale przyniósł ważne rozstrzygnięcia: Bańdo zdobyła kulę w debiucie, a Mitan spełnił cel podwójnego sezonowego zwycięstwa. Końcówka tekstu opisuje też weryfikowanie poprawności slalomowego przejazdu za pomocą nagrania.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Magdalena Bańdo",
+          "Juliusz Mitan",
+          "Maja Woźniczka",
+          "Karolina Haratek"
+        ],
+        "story_angles": [
+          "Bańdo: Kryształowa Kula w debiucie",
+          "Mitan: droga do dwóch kul",
+          "Obraz z kamery a decyzja sędziego"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: 20000 złotych w rękach Magdaleny Bańdo i Mateusza Buckiego",
+        "url": "https://www.ntn.pl/azs-wc-20000-zlotych-w-rekach-magdaleny-bando-i-mateusza-buckiego/",
+        "published": "2025-03-03",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy i Team Event",
+        "type": "relacja",
+        "summary": "Magdalena Bańdo i Mateusz Bucki wygrali indywidualne zawody równoległe, a Politechnika Warszawska część drużynową. Nagroda każdego indywidualnego triumfatora miała wartość 10 tys. zł, podzieloną między pieniądze i sprzęt. Autor opisuje warunki na miękkiej Harendzie, zmieniającą się trasę i rolę Michała Żyto w zwycięstwie PW.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Magdalena Bańdo",
+          "Mateusz Bucki",
+          "Michał Żyto",
+          "Kaja Szczepańska"
+        ],
+        "story_angles": [
+          "PW: zwycięski skład i przygotowanie drużyny",
+          "Bucki i Bańdo: jak wygrywa się bezpośrednie pojedynki?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "Gadające Głowy – finał AZS Winter Cup 2024/2025",
+        "url": "https://www.ntn.pl/gadajace-glowy-azs-winter-cup-2025-final/",
+        "published": "2025-04-24",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał — Gadające Głowy",
+        "type": "wideo — opis przeczytany, film do obejrzenia",
+        "summary": "Opis filmowego odcinka wraca do finału w Szczawnicy i walki o samochody oraz Kryształowe Kule. Zapowiada rozmowy z Juliuszem Mitanem, Jakubem Toporowskim, dwiema Majami oraz pożegnanie Michała z cyklem. Sam film trzeba jeszcze obejrzeć i wybrać wypowiedzi do transkrypcji; przeczytano opis publikacji.",
+        "status": "opis publikacji przeczytany; wideo do obejrzenia",
+        "people": [
+          "Juliusz Mitan",
+          "Jakub Toporowski",
+          "Maja Chyla",
+          "Maja Woźniczka"
+        ],
+        "story_angles": [
+          "Wybrać krótki dialog dwóch Maj",
+          "Ostatni start jako punkt wyjścia do rozmowy"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Opracowano tekstowe relacje wszystkich pięciu eliminacji, finału i zawodów równoległych; filmy wymagają obejrzenia.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [
+      "Juliusz Mitan"
+    ],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Adrianna: co zrobiła sekcja UW, że w Zawoi kobiet po raz pierwszy było więcej niż mężczyzn?",
+      "Magda i Maja: jak przeżyłyście pierwszy sezon rywalizacji z Mają Chylą i czy czułyście zmianę pokoleniową?",
+      "Juliusz i Jakub: co było mocniejsze — zdobycie dwóch kul czy pierwszy długo wyczekiwany medal? Poprośmy o konkretne sceny i zdjęcia."
+    ]
+  },
+  {
+    "season": "2025/26",
+    "articles": [
+      {
+        "title": "AZS WC: Zaskakująca inauguracja Akademickiego Pucharu Polski 2025/2026",
+        "url": "https://www.ntn.pl/azs-wc-zaskakujaca-inauguracja-akademickiego-pucharu-polski-2025-2026/",
+        "published": "2025-12-23",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "I eliminacje — Czarna Góra",
+        "type": "relacja",
+        "summary": "Inauguracja przeniesiona z Harendy do GrapaSki zgromadziła niemal 150 osób. Maja Woźniczka wygrała oba starty kobiet, Jakub Kolegowicz gigant, a Juliusz Kierkowski slalom mężczyzn. Wśród zmian regulaminowych autor wyróżnia dopuszczenie większej liczby kobiet do drugiego przejazdu, odpowiadające na ich rosnący udział w cyklu.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Jakub Kolegowicz",
+          "Juliusz Kierkowski"
+        ],
+        "story_angles": [
+          "Jak zmiana frekwencji kobiet wpłynęła na regulamin?",
+          "Debiutanci przejmują role od odchodzących liderów"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Mikołaj Sosnowski Superstar",
+        "url": "https://www.ntn.pl/azs-wc-mikolaj-sosnowski-superstar/",
+        "published": "2026-01-11",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "II eliminacje — Rytro",
+        "type": "relacja",
+        "summary": "Mikołaj Sosnowski odniósł podwójne zwycięstwo podczas powrotu cyklu do Rytra. U kobiet złota zdobyły Magdalena Bańdo i Maja Woźniczka, a do regularnej stawki dołączyła Patrycja Florek. Relacja podkreśla bardzo dobre zimowe warunki, cały stok dostępny dla studentów oraz sportowy przełom Sosnowskiego.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Mikołaj Sosnowski",
+          "Magdalena Bańdo",
+          "Maja Woźniczka",
+          "Patrycja Florek"
+        ],
+        "story_angles": [
+          "Sosnowski: dzień pierwszego wielkiego przełomu",
+          "Rytro jako przykład udanego powrotu lokalizacji"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Maja Woźniczka pokazuje moc w Myślenicach",
+        "url": "https://www.ntn.pl/azs-wc-maja-wozniczka-pokazuje-moc-w-myslenicach/",
+        "published": "2026-01-24",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "III eliminacje — Myślenice",
+        "type": "relacja",
+        "summary": "23 stycznia 2026 r. Myślenice zadebiutowały w historii Winter Cup. Maja Woźniczka wygrała dwukrotnie, a złota mężczyzn zdobyli Michał Żyto i Mateusz Bucki. Autor opisuje charakter stoku na Chełmie, rytmiczne ustawienie trasy i kwestie bezpieczeństwa wynikające z lasu po obu stronach.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Michał Żyto",
+          "Mateusz Bucki",
+          "Mariusz Staszel"
+        ],
+        "story_angles": [
+          "Dlaczego wybrano Myślenice i jak przygotowano nowy stok?",
+          "Nowe miejsce oczami debiutantów i weteranów"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Mistrzostwa Warszawy i najdłuższy gigant w sezonie",
+        "url": "https://www.ntn.pl/azs-wc-mistrzostwa-warszawy-i-najdluzszy-gigant-w-sezonie/",
+        "published": "2026-02-08",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "IV eliminacje — Zawoja",
+        "type": "relacja",
+        "summary": "Najdłuższy gigant sezonu wygrali Maja Woźniczka i Jakub Kolegowicz, a slalom Magdalena Bańdo i Juliusz Kierkowski. Zawody stanowiły zarazem mistrzostwa Warszawy, co dawało dodatkową stawkę reprezentantom stolicy. Odwilż zmieniała nawierzchnię, zaś start Woźniczki poprzedzały problemy po treningowym upadku.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Jakub Kolegowicz",
+          "Magdalena Bańdo",
+          "Juliusz Kierkowski",
+          "Michał Żyto"
+        ],
+        "story_angles": [
+          "Woźniczka: wygrać mimo trudnego tygodnia",
+          "Jeden start, dwie klasyfikacje — mistrzostwa Warszawy w cyklu ogólnopolskim"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Maja Woźniczka zdobywa Kryształowe Kule tydzień przed finałem",
+        "url": "https://www.ntn.pl/azs-wc-maja-wozniczka-zdobywa-krysztalowe-kule-tydzien-przed-finalem/",
+        "published": "2026-02-21",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "V eliminacje — Szczawnica",
+        "type": "relacja",
+        "summary": "Maja Woźniczka zapewniła sobie obie Kryształowe Kule tydzień przed finałem, zdobywając złoto slalomu i srebro giganta. Gigant wygrała Maja Chyla, a męską rywalizację zdominował Juliusz Kierkowski. Palenica zaoferowała bardzo twardą, stromą trasę, stawiającą wysokie wymagania techniczne przed ostatnią szansą awansu do finału.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Maja Chyla",
+          "Juliusz Kierkowski",
+          "Patrycja Florek",
+          "Mariusz Staszel"
+        ],
+        "story_angles": [
+          "Zmiana królowej cyklu: rozmowa dwóch Maj",
+          "Palenica — stok budzący respekt i niechęć"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Małe momenty wielkiego finału AZS Winter Cup",
+        "url": "https://www.ntn.pl/azs-wc-male-momenty-wielkiego-finalu-azs-winter-cup/",
+        "published": "2026-02-28",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Finał — Harenda",
+        "type": "relacja",
+        "summary": "Maja Woźniczka przypieczętowała podwójny sezonowy sukces zwycięstwami w obu finałowych konkurencjach. Najważniejsza nierozstrzygnięta walka dotyczyła męskiego giganta: Michał Żyto zdobył końcowe trofeum po pojedynku z Jakubem Kolegowiczem. Autor opisuje także zapomniane numery startowe i sprawdzanie poprawności przejazdu Juliusza Kierkowskiego, od którego zależała dodatkowa nagroda.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Woźniczka",
+          "Michał Żyto",
+          "Jakub Kolegowicz",
+          "Juliusz Kierkowski",
+          "Mikołaj Sosnowski"
+        ],
+        "story_angles": [
+          "Żyto: zwieńczenie akademickiej kariery",
+          "Kierkowski i sędzia: odtworzyć ostatnie minuty finału",
+          "Woźniczka o presji dominującego sezonu"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      },
+      {
+        "title": "AZS WC: Maja Chyla i Juliusz Kierkowski wygrywają w slalomie równoległym",
+        "url": "https://www.ntn.pl/azs-wc-maja-chyla-i-juliusz-kierkowski-wygrywaja-w-slalomie-rownoleglym/",
+        "published": "2026-03-02",
+        "date_scope": "Data publikacji; datę zawodów należy uzgodnić z kalendarzem i wynikami.",
+        "edition": "Slalom równoległy i Team Event",
+        "type": "relacja",
+        "summary": "Maja Chyla i Juliusz Kierkowski wygrali indywidualne slalomy równoległe, a AWF Katowice rywalizację drużynową. Po nocnym deszczu organizatorzy dotarli do twardszej warstwy śniegu, dzięki czemu Harenda wytrzymała cały dzień. Nagrody indywidualne miały formę bonów sprzętowych po 5 tys. zł, a ustępująca mistrzowska drużyna PW zajęła drugie miejsce.",
+        "status": "streszczenie robocze na podstawie treści artykułu",
+        "people": [
+          "Maja Chyla",
+          "Juliusz Kierkowski",
+          "Norbert Wróbel",
+          "Vladyslav Kyryk"
+        ],
+        "story_angles": [
+          "AWF Katowice: przejęcie tytułu drużynowego",
+          "Jak zmieniały się nagrody i po co startuje się w równoległym?"
+        ],
+        "author": "Michał Szypliński",
+        "publisher": "NTN Snow & More",
+        "checked_at": "2026-11-05",
+        "source_method": "Publiczne WordPress REST API: pełna treść wpisu; ręcznie odczytane fragmenty merytoryczne, wstęp i zakończenie.",
+        "author_verified": true,
+        "author_evidence": "HTML meta[name=author]"
+      }
+    ],
+    "gaps": [
+      "Opracowano tekstowe relacje wszystkich pięciu eliminacji, finału i zawodów równoległych; filmy wymagają obejrzenia.",
+      "Rozmowy, cytaty i wybór fotografii wymagają osobnej pracy redakcyjnej."
+    ],
+    "interview_candidates": [],
+    "interview_status": "Kolejka wskazana przez autora; przypisanie sezonów do ustalenia. Nie kontaktowano nikogo. Inne osoby wymienione w źródłach są bohaterami relacji, nie nową kolejką rozmów.",
+    "editorial_questions": [
+      "Maja: jak ze srebrnej rywalki w debiucie zostałaś podwójną triumfatorką sezonu i co zmieniłaś w przygotowaniach?",
+      "Michał i Jakub: co działo się w Waszych głowach podczas finałowej walki o gigant?",
+      "Juliusz i świadkowie: odtwórzmy moment sprawdzania finałowego slalomu — co było widoczne na nagraniach i co rozstrzygnął sędzia?"
+    ]
+  }
+]

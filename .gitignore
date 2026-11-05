@@ -1,0 +1,6 @@
+tmp/
+.DS_Store
+research/downloads/
+research/results-pdfs/
+research/reference/album-10-text.txt
+__pycache__/

@@ -1,0 +1,1549 @@
+{
+  "as_of": "2026-11-05",
+  "source_url": "https://wintercup.pl/wyniki/",
+  "notes": [
+    "Nazwy i daty przepisane z indeksu oficjalnego archiwum wyników. Indeks zawiera możliwe literówki; do ostatecznej chronologii daty trzeba skonfrontować z nagłówkiem PDF i relacją. Daty z zakresami wymagają ręcznego sprawdzenia."
+  ],
+  "seasons": [
+    {
+      "season": "2025/26",
+      "events": [
+        {
+          "label": "Równoległe, 02.03.2026: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "indywidualnie",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/03/260302_wintercup_wyniki_sl_r.pdf"
+            },
+            {
+              "title": "team event",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/03/260302_wintercup_wyniki_te.pdf"
+            }
+          ],
+          "date": "2026-03-02"
+        },
+        {
+          "label": "Finał, 27.02.2026: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260227_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260227_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2026-02-27"
+        },
+        {
+          "label": "V eliminacje, 20.02.2026: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260220_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260220_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2026-02-20"
+        },
+        {
+          "label": "IV eliminacje, 06.02.2026: Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260206_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/02/260206_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2026-02-06"
+        },
+        {
+          "label": "III eliminacje, 23.01.2026: Myślenice",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/01/260123_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/01/260123_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2026-01-23"
+        },
+        {
+          "label": "II eliminacje, 09.01.2026: RyterSKI",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/01/260109_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2026/01/260109_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2026-01-09"
+        },
+        {
+          "label": "I eliminacje, 22.12.2025: GrapaSKI",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/12/251222_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/12/251222_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-12-22"
+        }
+      ]
+    },
+    {
+      "season": "2024/25",
+      "events": [
+        {
+          "label": "3.03.2025: Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "slalom równoległy",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250303_psl_wyniki_k.pdf"
+            },
+            {
+              "title": "team event",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250303_team_event_wyniki_k-1.pdf"
+            }
+          ],
+          "date": "2025-03-03"
+        },
+        {
+          "label": "OCZKO, 1.03.2025: Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250301_oczko_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250301_oczko_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-03-01"
+        },
+        {
+          "label": "Finały, 28.02.2025: Szczawnica, Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250228_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250228_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-02-28"
+        },
+        {
+          "label": "V eliminacje, 21.02.2025: Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250221_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250221_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-02-21"
+        },
+        {
+          "label": "IV eliminacje, 07.02.2025: Jurgów",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250207_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://web.archive.org/web/20250420060331/https://wintercup.pl/wp-content/uploads/2025/02/250207_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-02-07"
+        },
+        {
+          "label": "III eliminacje, 24.01.2025: Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250124_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250124_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-01-24"
+        },
+        {
+          "label": "II eliminacje, 10.01.2025: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250110_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/250110_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2025-01-10"
+        },
+        {
+          "label": "I eliminacje, 20.12.2024: GrapaSKI",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/241220_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/241220_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-12-20"
+        }
+      ]
+    },
+    {
+      "season": "2023/24",
+      "events": [
+        {
+          "label": "4.03.2024: Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "slalom równoległy",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240304_psl_wyniki.pdf"
+            },
+            {
+              "title": "team event",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240304_team_event_wyniki.pdf"
+            }
+          ],
+          "date": "2024-03-04"
+        },
+        {
+          "label": "Finały, 01.03.2024: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240301_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240301_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-03-01"
+        },
+        {
+          "label": "V eliminacje, 23.02.2024: GrapaSki",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240223_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240223_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-02-23"
+        },
+        {
+          "label": "IV eliminacje, 09.02.2024: Zawoja",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240209_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240209_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-02-09"
+        },
+        {
+          "label": "III eliminacje, 26.01.2024: Krynica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240126_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240126_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-01-26"
+        },
+        {
+          "label": "II eliminacje, 12.01.2024: RyterSKI",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240112_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/240112_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2024-01-12"
+        },
+        {
+          "label": "I eliminacje, 22.12.2023: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/231222_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2025/11/231222_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-12-22"
+        }
+      ]
+    },
+    {
+      "season": "2022/23",
+      "events": [
+        {
+          "label": "SL Równoległy / Team Event, 05.03.2023: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "slalom równoległy",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/03/230305_wintercup_psl_wyniki.pdf"
+            },
+            {
+              "title": "team event",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/03/230305_wintercup_te_wyniki.pdf"
+            }
+          ],
+          "date": "2023-03-05"
+        },
+        {
+          "label": "Finał, 03.03.2023: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/03/230303_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/03/230303_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-03-03"
+        },
+        {
+          "label": "V eliminacje, 24.02.2023: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/02/230224_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/02/230224_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-02-24"
+        },
+        {
+          "label": "IV eliminacje, 10.02.2023: Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/02/230210_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/02/230210_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-02-10"
+        },
+        {
+          "label": "III eliminacje, 27.01.2023: Czarna Góra",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/01/230127_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/01/230127_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-01-27"
+        },
+        {
+          "label": "II eliminacje, 13.01.2023: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/01/230113_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2023/01/230113_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2023-01-13"
+        },
+        {
+          "label": "I eliminacje, 19.12.2022: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/12/221219_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/12/221219_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-12-19"
+        }
+      ]
+    },
+    {
+      "season": "2021/22",
+      "events": [
+        {
+          "label": "Team Event, 06.03.2022: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/03/220306_wintercup_wyniki.pdf"
+            }
+          ],
+          "date": "2022-03-06"
+        },
+        {
+          "label": "Puchar “18”, 05.03.2022: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/03/220305_osiemnastka_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/03/220305_osiemnastka_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-03-05"
+        },
+        {
+          "label": "Slalom równoległy, 04.03.2022: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/03/220304_wintercup_wyniki.pdf"
+            }
+          ],
+          "date": "2022-03-04"
+        },
+        {
+          "label": "Finał, 25.02.2022: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220225_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220225_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-02-25"
+        },
+        {
+          "label": "V eliminacje, 18.02.2022: Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220218_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220218_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-02-18"
+        },
+        {
+          "label": "IV eliminacje, 04.02.2022: Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220204_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/02/220204_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-02-04"
+        },
+        {
+          "label": "III eliminacje, 21.01.2022: Jaworzyna Krynicka",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/01/220121_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/01/220121_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-01-21"
+        },
+        {
+          "label": "II eliminacje, 07.01.2022: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/01/220107_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2022/01/220107_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2022-01-07"
+        },
+        {
+          "label": "I eliminacje, 20.12.2021: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/12/211220_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/12/211220_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-12-20"
+        }
+      ]
+    },
+    {
+      "season": "2020/21",
+      "events": [
+        {
+          "label": "Team event, 28.02.2021: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210228_wintercup_wyniki.pdf"
+            }
+          ],
+          "date": "2021-02-28"
+        },
+        {
+          "label": "Slalom równoległy, 27.02.2021: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210227_wintercup_wyniki_psl.pdf"
+            }
+          ],
+          "date": "2021-02-27"
+        },
+        {
+          "label": "Finał, 26.02.2021: Szczawnica, Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210226_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210226_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-02-26"
+        },
+        {
+          "label": "V eliminacje, 19.02.2021: Szczawnica, Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210219_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210219_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-02-19"
+        },
+        {
+          "label": "IV eliminacje, 5.02.2021: Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210205_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/02/210205_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-02-05"
+        },
+        {
+          "label": "III eliminacje, 22.01.2021: Jaworzyna Krynicka",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/01/210122_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/01/210122_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-01-22"
+        },
+        {
+          "label": "II eliminacje, 15.01.2021: Grapa-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/01/210115_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2021/01/210115_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2021-01-15"
+        },
+        {
+          "label": "I eliminacje, 21.12.2020: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/12/201221_wintercup_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/12/201221_wintercup_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-12-21"
+        }
+      ]
+    },
+    {
+      "season": "2019/20",
+      "events": [
+        {
+          "label": "Slalom równoległy, 1.03.2020: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/03/200301_harenda_wyniki_psl.pdf"
+            }
+          ],
+          "date": "2020-03-01"
+        },
+        {
+          "label": "Finały, 28.02.2020: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200228_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200228_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-02-28"
+        },
+        {
+          "label": "I eliminacje, 21.02.2020: Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200221_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200221_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-02-21"
+        },
+        {
+          "label": "V eliminacje, 14.02.2020: Palenica",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200214_szczawnica_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/02/200214_szczawnica_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-02-14"
+        },
+        {
+          "label": "IV eliminacje, 31.01.2020: Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200131_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200131_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-01-31"
+        },
+        {
+          "label": "III eliminacje, 24.01.2020: Jaworzyna Krynicka",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200124_krynica_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200124_krynica_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-01-24"
+        },
+        {
+          "label": "II eliminacje, 10.01.2020: Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200110_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2020/01/200110_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2020-01-10"
+        }
+      ]
+    },
+    {
+      "season": "2018/19",
+      "events": [
+        {
+          "label": "FINAŁ, 22/24.02.2019: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190222_harenda_final_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190222_harenda_final_wyniki_m.pdf"
+            }
+          ],
+          "date_start": "2019-02-22",
+          "date_end": "2019-02-24",
+          "date_source_url": "https://wintercup.pl/wp-content/uploads/2019/02/190222_harenda_final_wyniki_k.pdf",
+          "disciplines": [
+            {
+              "date": "2019-02-22",
+              "name": "Slalom kobiet"
+            },
+            {
+              "date": "2019-02-24",
+              "name": "Slalom gigant kobiet"
+            }
+          ],
+          "notes": [
+            "Daty SL i GS potwierdzone w nagłówkach PDF wyników kobiet."
+          ]
+        },
+        {
+          "label": "Slalom równoległy, 23.02.2019: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190223_harenda_psl_wyniki_K.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190223_harenda_psl_wyniki_M.pdf"
+            }
+          ],
+          "date": "2019-02-23"
+        },
+        {
+          "label": "V eliminacje, 15.02.2019: Szczawnica/Palenica I",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190215_szczawnica_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190215_szczawnica_wyniki_m.pdf"
+            }
+          ],
+          "date": "2019-02-15"
+        },
+        {
+          "label": "IV eliminacje, 1.02.2019: Zawoja/Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190201_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/02/190201_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2019-02-01"
+        },
+        {
+          "label": "III eliminacje, 25.01.2019: Szczawnica/Palenica I",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/01/190125_szczawnica_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/01/190125_szczawnica_wyniki_m.pdf"
+            }
+          ],
+          "date": "2019-01-25",
+          "archive_label": "III eliminacje, 11.01.2019: Szczawnica/Palenica I",
+          "date_source_url": "https://wintercup.pl/wp-content/uploads/2019/01/190125_szczawnica_wyniki_k.pdf",
+          "notes": [
+            "Korekta literówki indeksu: data 25.01.2019 potwierdzona w nagłówku PDF wyników; indeks błędnie powtarza 11.01.2019."
+          ]
+        },
+        {
+          "label": "II eliminacje, 11.01.2019: Kluszkowce/Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/01/190111_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2019/01/190111_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2019-01-11"
+        },
+        {
+          "label": "I eliminacje, 21.12.2018: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/12/181221_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/12/181221_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-12-21"
+        }
+      ]
+    },
+    {
+      "season": "2017/18",
+      "events": [
+        {
+          "label": "Puchar XV-lecia, 3.03.2018: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/03/180303_harenda_pucharXV_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/03/180303_harenda_pucharXV_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-03-03"
+        },
+        {
+          "label": "Finały, 2.03.2018: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/03/180302_harenda_final_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/03/180302_harenda_final_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-03-02"
+        },
+        {
+          "label": "V eliminacje, 23.02.2018: Szczyrk",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/02/180223_szczyrk_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/02/180223_szczyrk_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-02-23"
+        },
+        {
+          "label": "IV eliminacje, 9.02.2018: Kluszkowce/Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/02/180209_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/02/180209_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-02-09"
+        },
+        {
+          "label": "III eliminacje, 26.01.2018: Zawoja/Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/01/180126_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/01/180126_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-01-26"
+        },
+        {
+          "label": "II eliminacje, 12.01.2018: Kluszkowce/Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/01/180112_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2018/01/180112_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2018-01-12"
+        },
+        {
+          "label": "I eliminacje, 21.12.2017: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/12/171221_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/12/171221_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2017-12-21"
+        }
+      ]
+    },
+    {
+      "season": "2016/17",
+      "events": [
+        {
+          "label": "Zawody finałowe, 26.02.2017: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/02/170226_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/02/170226_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2017-02-26"
+        },
+        {
+          "label": "IV eliminacje, 17.02.2017: Zakopane/Kasprowy Wierch",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/02/170217_kasprowy_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/02/170217_kasprowy_wyniki_m.pdf"
+            }
+          ],
+          "date": "2017-02-17"
+        },
+        {
+          "label": "III eliminacje, 27.01.2017: Kluszkowce/Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/01/170127_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/01/170127_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2017-01-27"
+        },
+        {
+          "label": "II eliminacje, 13.01.2017: Zawoja/Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/01/170113_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2017/01/170113_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2017-01-13"
+        },
+        {
+          "label": "I eliminacje, 22.12.2016: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/12/161222_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/12/161222_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-12-22"
+        }
+      ]
+    },
+    {
+      "season": "2015/16",
+      "events": [
+        {
+          "label": "FINAŁY, 28.02.2016: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_28_final_Harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_28_final_Harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-02-28"
+        },
+        {
+          "label": "V eliminacje, 19.02.2016: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_19_Harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_19_Harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-02-19"
+        },
+        {
+          "label": "IV eliminacje, 12.02.2016: Zawoja/Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_12_Zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_12_Zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-02-12"
+        },
+        {
+          "label": "III eliminacje, 05.02.2016: Zakopane/Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_05_Zakopane_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/02/2016_02_05_Zakopane_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-02-05"
+        },
+        {
+          "label": "II eliminacje, 22.01.2016: Istebna",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/01/2016_01_22_Istebna_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/01/2016_01_22_Istebna_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-01-22"
+        },
+        {
+          "label": "I eliminacje, 15.01.2016: Kluszkowce",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/01/2016_01_15_Kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2016/01/2016_01_15_Kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2016-01-15"
+        }
+      ]
+    },
+    {
+      "season": "2014/15",
+      "events": [
+        {
+          "label": "Zawody finałowe, 01.03.2015: Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/03/2015_03_01_final_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/03/2015_03_01_final_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-03-01"
+        },
+        {
+          "label": "V (VI) eliminacje, 20.02.2015: Kluszkowce, Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/02/2015_02_20_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/02/2015_02_20_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-02-20"
+        },
+        {
+          "label": "IV (V) eliminacje, 13.02.2015: Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/02/2015_02_13_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/02/2015_02_13_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-02-13"
+        },
+        {
+          "label": "III (IV) eliminacje, 30.01.2015: Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_30_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_30_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-01-30"
+        },
+        {
+          "label": "II (III) eliminacje, 16.01.2015: Kluszkowce, Czorsztyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_16_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_16_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-01-16"
+        },
+        {
+          "label": "I (II) eliminacje, 9.01.2015: Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_09_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2015/01/2015_01_09_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2015-01-09"
+        }
+      ]
+    },
+    {
+      "season": "2013/14",
+      "events": [
+        {
+          "label": "I eliminacje, 20.12.2013 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20131220_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20131220_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-12-20"
+        },
+        {
+          "label": "II eliminacje, 24.01.2014 Czorstyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140124_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140124_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2014-01-24"
+        },
+        {
+          "label": "III eliminacje, 31.01.2014 Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140131_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140131_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2014-01-31"
+        },
+        {
+          "label": "IV eliminacje, 7.02.2014 Czorstyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140207_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140207_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2014-02-07"
+        },
+        {
+          "label": "V eliminacje, 21.02.2014 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140221_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140221_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2014-02-21"
+        },
+        {
+          "label": "FINAŁY, 2.03.2014 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140302_harenda_final_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/20140302_harenda_final_wyniki_m.pdf"
+            }
+          ],
+          "date": "2014-03-02"
+        }
+      ]
+    },
+    {
+      "season": "2012/13",
+      "events": [
+        {
+          "label": "I eliminacje, 21.12.2012 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_12_21_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_12_21_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2012-12-21"
+        },
+        {
+          "label": "II eliminacje, 11.01.2013 Czorstyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_01_11_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_01_11_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-01-11"
+        },
+        {
+          "label": "III eliminacje, 18.01.2013 Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_01_18_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_01_18_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-01-18"
+        },
+        {
+          "label": "IV eliminacje, 1.02.2013 Czorstyn-Ski",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_01_kluszkowce_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_01_kluszkowce_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-02-01"
+        },
+        {
+          "label": "V eliminacje, 8.02.2013 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_08_harenda_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_08_harenda_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-02-08"
+        },
+        {
+          "label": "VI eliminacje, 15.02.2013 Zawoja, Mosorny Groń",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_15_zawoja_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_02_15_zawoja_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-02-15"
+        },
+        {
+          "label": "FINAŁY, 1.03.2013 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_03_01_final_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_03_01_final_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-03-01"
+        },
+        {
+          "label": "PUCHAR X-LECIA, 2.03.2013 Zakopane, Harenda",
+          "source_url": "https://wintercup.pl/wyniki/",
+          "results": [
+            {
+              "title": "wyniki kobiet",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_03_02_puchar_X-lecia_wyniki_k.pdf"
+            },
+            {
+              "title": "wyniki mężczyzn",
+              "url": "https://wintercup.pl/wp-content/uploads/2014/11/1213_03_02_puchar_X-lecia_wyniki_m.pdf"
+            }
+          ],
+          "date": "2013-03-02"
+        }
+      ]
+    }
+  ]
+}
