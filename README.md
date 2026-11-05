@@ -11,7 +11,7 @@ Repozytorium: **https://github.com/Maciorex/azs-wintercup-album-25**
 - Charakter: sportowa kronika i wyniki oraz barwne wspomnienia uczestników. Objętość i termin druku ustalimy później.
 - Autorzy: Maciej (użytkownik) i Antoni Zalewski. Adam Smolik i Kuba Jasiński pomogą przy najnowszych sezonach; dokładny podział nieustalony.
 - Archiwa: użytkownik potwierdził dostęp do wszystkich zdjęć Michała Szyplińskiego i do organizatorów AZS. Nie kontaktowano nikogo w imieniu redakcji.
-- Hall of Fame: medale pojedynczych zawodów SL/GS oraz **oddzielnie** zwycięstwa sezonów. Historyczna baza jest odczytana; aktualizacja medali 2012–2026 pozostaje następnym etapem.
+- Hall of Fame: jedna tabela medalowa całej historii — baza pierwszych 10 sezonów plus medale eliminacji i finałów SL/GS z 2012/13–2025/26. **Oddzielnie** pozostają zwycięstwa sezonów.
 
 ## Co jest gotowe
 
@@ -24,6 +24,8 @@ Sekcja **Układ stron** przy każdym sezonie zawiera edytowalną makietę: waria
 3. **197 linków NTN łącznie**, w tym powyższe 39. Pozostałe 158 to indeks do dalszej lektury; autorstwo nie jest automatycznie przypisane.
 4. **97 adresów galerii**: 42 SkiFoto, 49 Facebook i sześć historycznych SkiFoto. Facebook jest wskazany odnośnikami z relacji; zawartość albumów nie została odczytana. 32 SkiFoto zwróciły HTTP 200, 10 prób odczytu skończyło się timeoutem.
 5. **98 wydarzeń** w kalendarzu, **119 osób** w historycznej tabeli medalowej 2002/03–2011/12 i **56 zwycięskich pozycji** w generalkach 2012/13–2025/26. To trzy różne zbiory; nie sumujemy ich jako jednego dorobku.
+
+Hall of Fame łączy historyczną bazę z **1004 medalami** z 334 rozegranych konkurencji nowych sezonów, na podstawie 168 oficjalnych PDF-ów wyników 84 zwykłych imprez. Dwie konkurencje gigantowe 27.01.2023 zostały odwołane i nie dostały medali. Uwzględniono remisy. Wyłączono puchary jubileuszowe, slalom równoległy i team event. Kolumny pokazują osobno wkład pierwszego tomu i dalszych sezonów. Niepotwierdzone zmiany nazwisk pozostają osobnymi rekordami z jawną adnotacją. Rejestr podium z linkami do konkretnych PDF-ów jest widoczny w Hall of Fame; pełna metoda w `research/medals-notes.md`.
 
 ## Jak dopisywać notatki
 
@@ -40,7 +42,7 @@ Przy zmianie przeglądarki, nazwy lub lokalizacji pliku oraz przejściu z pliku 
 - `site/` — źródła HTML, CSS i JavaScript; `tools/build.py` łączy je z materiałami.
 - `research/results.json`, `result-events.json` — generalki oraz kalendarz i PDF-y edycji.
 - `research/articles.json`, `articles-index.json`, `photos.json` — streszczenia, indeks NTN i galerie.
-- `research/medals-baseline.json` oraz pliki `*-notes.md` — historyczna baza Hall of Fame, metoda kwerendy i rozbieżności.
+- `research/medals-baseline.json`, `medals-updated.json`, `medals-podium.json` oraz pliki `*-notes.md` — historyczna i łączna tabela Hall of Fame, rejestr podium, metoda kwerendy i rozbieżności.
 
 Po zmianie danych lub wyglądu:
 
@@ -61,6 +63,6 @@ Redakcja wyraziła zgodę na publiczne repozytorium i publiczną stronę GitHub 
 
 Przegląd sezonów i luźne notatki, następnie rozmowy z: Adamem Chrapkiem, Filipem Rzepeckim, Jakubem Ilewiczem, Anią Berezik, Karoliną Klimek, Kasią Ostrowską i Julkiem Mitanem. Użytkownik wskazał tę kolejkę; terminy i prowadzący nie są ustalone.
 
-Priorytet archiwalny: indeks prywatnych zdjęć Michała/AZS, brakujące galerie IV/V eliminacji 2012/13 i pięciu eliminacji 2025/26 oraz konflikty linków FB. Dalej: pełne podium zawodów do aktualizacji medali Hall of Fame, druga korekta wyników i identyfikacja zmian nazwisk. Nie traktować nieodczytanych albumów ani indeksu artykułów jako opracowanych materiałów.
+Priorytet archiwalny: indeks prywatnych zdjęć Michała/AZS, brakujące galerie IV/V eliminacji 2012/13 i pięciu eliminacji 2025/26 oraz konflikty linków FB. Dalej: druga korekta wyników i identyfikacja zmian nazwisk w Hall of Fame. Nie traktować nieodczytanych albumów ani indeksu artykułów jako opracowanych materiałów.
 
-**Następne kroki:** przegląd kart i dopisywanie wspomnień; później uzupełnienie luk oraz aktualizacja medali.
+**Następne kroki:** przegląd kart, planowanie stron i dopisywanie wspomnień; uzupełnienie luk oraz korekta nazwisk.

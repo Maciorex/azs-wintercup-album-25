@@ -55,8 +55,18 @@ for i, year in enumerate(range(2012, 2026)):
         'workingAngle': angles[0] if angles else '',
     })
 
+podium = read('medals-podium.json', {})
+podium_summary = {
+    'coverage': podium.get('coverage', {}),
+    'methodology': podium.get('methodology', ''),
+    'excluded_events': podium.get('excluded_events', []),
+    'races': [{k: race[k] for k in ['season', 'event_label', 'category', 'source_url', 'source_page', 'status', 'notes'] if k in race}
+              | {'rows': [{k: row[k] for k in ['place', 'name'] if k in row} for row in race.get('rows', [])]}
+              for race in podium.get('races', [])]
+}
 data = {'as_of': '2026-11-05', 'scope': '2012/13–2025/26 + rozdział jubileuszowy',
-        'seasons': seasons, 'medals': read('medals-baseline.json', {'tables': []})}
+        'seasons': seasons, 'medals': read('medals-baseline.json', {'tables': []}),
+        'medalsUpdated': read('medals-updated.json', None), 'medalPodium': podium_summary}
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 html = (ROOT/'site/template.html').read_text()
 html = html.replace('/* STYLES */', (ROOT/'site/styles.css').read_text())

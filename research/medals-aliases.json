@@ -1,0 +1,60 @@
+{
+  "method": "Automatycznie łączone są wyłącznie te same tokeny pełnego imienia i nazwiska po normalizacji Unicode, wielkości liter i kolejności. Inne połączenia wymagają osobnego jawnego dowodu.",
+  "aliases": [
+    {
+      "gender": "M",
+      "canonical_name": "Przemysław Gałuszka",
+      "variants": [
+        "Gałuszka Przemek",
+        "Gałuszka Przemysław"
+      ],
+      "source_urls": [
+        "https://www.ntn.pl/azs-wc-przedswiateczne-otwarcie-sezonu/"
+      ],
+      "evidence": "Relacja z 23.12.2016 określa tego samego zwycięzcę SL z AWF Katowice jako Przemysława Gałuszkę i Przemka Gałuszkę."
+    },
+    {
+      "gender": "K",
+      "canonical_name": "Anna Skarbek-Malczewska",
+      "variants": [
+        "Skarbek-Malczewska Ania",
+        "Skarbek-Malczewska Anna"
+      ],
+      "source_urls": [
+        "https://www.ntn.pl/azs-wc-warto-bylo-poczekac/",
+        "https://www.ntn.pl/azs-wc-cos-z-niczego/",
+        "https://wintercup.pl/wp-content/uploads/2025/11/231222_wintercup_wyniki_k.pdf",
+        "https://wintercup.pl/wp-content/uploads/2025/11/240223_wintercup_wyniki_k.pdf"
+      ],
+      "evidence": "NTN 23.12.2023 używa Anna oraz Ania dla tej samej zawodniczki PK Kraków i drugiego miejsca SL (strata 1.00 s), oficjalny PDF podaje Anna. NTN 24.02.2024 podaje Anna jako trzecią w SL, PDF tej samej imprezy podaje Ania."
+    },
+    {
+      "gender": "K",
+      "canonical_name": "Dorota Sierpińska",
+      "previous_names": [
+        "Dorota Kaczmarek"
+      ],
+      "variants": [
+        "Dorota Kaczmarek",
+        "Kaczmarek Dorota",
+        "Dorota Sierpińska",
+        "Sierpińska Dorota"
+      ],
+      "source_type": "user_confirmation",
+      "date": "2026-11-05",
+      "source_urls": [],
+      "evidence": "Użytkownik potwierdził 5 listopada 2026, że Dorota Kaczmarek i Dorota Sierpińska to ta sama osoba; nazwisko Sierpińska przyjęła po wyjściu za mąż. Potwierdzenie nie obejmuje Doroty Siedleckiej.",
+      "confirmation_quote": "Dorota Kaczmarek i Dorota Sierpińska to ta sama osoba tylko po wyjściu za mąż"
+    }
+  ],
+  "unresolved": [
+    {
+      "gender": "K",
+      "names": [
+        "Dorota Siedlecka"
+      ],
+      "status": "kept_separate",
+      "note": "Dorota Siedlecka pozostaje osobnym rekordem. Potwierdzenie użytkownika z 2026-11-05 dotyczy wyłącznie pary Kaczmarek/Sierpińska; nie stanowi podstawy do połączenia Siedleckiej z tą parą."
+    }
+  ]
+}
