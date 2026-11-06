@@ -69,7 +69,7 @@ data = {'as_of': '2026-11-05', 'scope': '2012/13–2025/26 + rozdział jubileusz
         'medalsUpdated': read('medals-updated.json', None), 'medalPodium': podium_summary}
 payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
 html = (ROOT/'site/template.html').read_text()
-html = html.replace('/* STYLES */', (ROOT/'site/styles.css').read_text())
+html = html.replace('/* STYLES */', (ROOT/'site/styles.css').read_text() + '\n' + (ROOT/'site/proof.css').read_text())
 html = html.replace('/* DATA */', 'window.ALBUM_DATA = ' + payload + ';')
 html = html.replace('/* APP */', (ROOT/'site/app.js').read_text())
 (ROOT/'index.html').write_text(html)

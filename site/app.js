@@ -23,7 +23,8 @@ const interviewSeeds = [
   {name:'Juliusz Mitan',role:'Perspektywa uczestnika'}
 ];
 const interviewAliases = {'ania berezik':'anna berezik','kasia ostrowska':'katarzyna ostrowska','julek mitan':'juliusz mitan'};
-const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary','layoutTemplate',...Object.keys(layoutFields),...interviewFields];
+const publicationFields = ['albumQuote','albumQuoteAuthor','albumCaption1','albumCaption2','albumCaption3','albumIntro','albumAnniversary'];
+const allowedFields = ['angle','writer','status','interviewees','questions','memories','draft','photos','todo','intro','hallRules','hallNotes','teamNotes','anniversary','layoutTemplate',...Object.keys(layoutFields),...interviewFields,...publicationFields];
 const layoutTemplates = {
   spread:{label:'2 strony · rozkładówka',pages:[
     {title:'Otwarcie i kronika',slots:['layoutTitle','layoutHero','layoutStory']},
@@ -38,8 +39,8 @@ const layoutTemplates = {
 };
 const categoryLabels = {GS_K:'Gigant · kobiety',SL_K:'Slalom · kobiety',GS_M:'Gigant · mężczyźni',SL_M:'Slalom · mężczyźni',TEAM_K:'Uczelnie · kobiety',TEAM_M:'Uczelnie · mężczyźni'};
 const categoryOrder = Object.keys(categoryLabels);
-const seasonTabs = [{id:'uklad',label:'Układ'},{id:'tresc',label:'Treść i notatki'},{id:'archiwum',label:'Archiwum i wiedza'}];
-const seasonTabAliases = {uklad:'uklad',tresc:'tresc',plan:'tresc',archiwum:'archiwum',wyniki:'archiwum',relacje:'archiwum',galerie:'archiwum'};
+const seasonTabs = [{id:'uklad',label:'Układ'},{id:'tresc',label:'Treść i notatki'},{id:'archiwum',label:'Archiwum i wiedza'},{id:'podglad',label:'Podgląd'}];
+const seasonTabAliases = {uklad:'uklad',tresc:'tresc',plan:'tresc',archiwum:'archiwum',wyniki:'archiwum',relacje:'archiwum',galerie:'archiwum',podglad:'podglad'};
 let planning = {};
 let activeCategory = 'GS_K';
 let pendingSeasonTabFocus = null;
@@ -132,7 +133,7 @@ function totals() {
 function renderNav() {
   const route=(location.hash.slice(1).split(':')[0] || 'start');
   const activeRoute=route==='osoba'?'rozmowy':route;
-  const items=[['start','Przegląd albumu','01'],['wstep','Wstęp i układ','02'],['rozmowy','Do przepytania','03'],['jubileusz','Rozdział jubileuszowy','04'],['hall','Hall of Fame','05']];
+  const items=[['start','Przegląd albumu','01'],['wstep','Wstęp i układ','02'],['rozmowy','Do przepytania','03'],['jubileusz','Rozdział jubileuszowy','04'],['hall','Hall of Fame','05'],['podglad','Podgląd albumu','06']];
   document.querySelector('#main-nav').innerHTML=items.map(([id,label,n])=>`<a href="#${id}" class="${activeRoute===id?'active':''}" ${activeRoute===id?'aria-current="page"':''}><span>${label}</span><span>${n}</span></a>`).join('');
   const q=document.querySelector('#season-search').value.trim().toLocaleLowerCase('pl');
   const found=D.seasons.filter(s=>!q || JSON.stringify(s).toLocaleLowerCase('pl').includes(q));
@@ -219,15 +220,63 @@ function seasonNotes(s) {
   const gaps=unique([...s.resultGaps,...s.articleGaps,...s.photoGaps]);
   return `<section id="plan">${sectionTitle('Co chcemy opowiedzieć?','Pomysły do rozmowy, nie gotowy tekst')}
   <div class="two-col"><div class="panel"><h3>Tropy z przeczytanych relacji</h3>${angles.length?list(angles):'<p>Po lekturze zapiszcie najważniejszy konflikt sportowy, przełom albo scenę z tego sezonu.</p>'}${suggestedPeople.length?`<p class="source-note">Nazwiska pojawiające się w materiałach: ${suggestedPeople.map(e).join(', ')}.</p>`:''}<p class="source-note">To propozycje tematów, które wymagają Waszej pamięci i rozmów z uczestnikami.</p>${s.interviewCandidates.length?`<p class="source-note">Z Waszej kolejki rozmów: ${s.interviewCandidates.map(e).join(', ')}. Przypisanie do sezonu do ustalenia.</p>`:''}${s.editorialQuestions.length?`<details><summary>Pytania robocze do rozmów</summary>${list(s.editorialQuestions)}</details>`:''}</div><div class="panel"><h3>Do uzupełnienia w archiwum</h3>${gaps.length?list(gaps.slice(0,5)):'<p>Źródła znalezione. Kolejny etap: korekta, wspomnienia i wybór zdjęć.</p>'}${gaps.length>5?`<details><summary>Pozostałe braki (${gaps.length-5})</summary>${list(gaps.slice(5))}</details>`:''}</div></div>
-  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${seasonInterviewField(s)}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>`;
+  <div class="planning"><h3>Notatnik sezonu</h3><p class="source-note">Dopiski zapisują się lokalnie. Eksportuj notatki przed zmianą urządzenia lub przekazaniem ich Antoniemu.</p><div class="fields-grid">${field(s.id,'angle','Roboczy tytuł / główny temat','Co wyróżnia ten sezon?','input')}${field(s.id,'writer','Autor / osoba prowadząca','Ty / Antoni / do ustalenia','input')}${field(s.id,'status','Etap pracy','','select')}${seasonInterviewField(s)}${field(s.id,'memories','Luźne wspomnienia','Skojarzenia, sceny, anegdoty. Nie trzeba układać ich w tekst.')}${field(s.id,'questions','Pytania do bohaterów','Co było stawką? Co pamiętasz spoza trasy? Kto ma inną wersję tej historii?')}${field(s.id,'draft','Szkic tekstu do albumu','Miejsce na pierwszą wersję — po obejrzeniu źródeł i rozmowach.')}${field(s.id,'albumQuote','Wspomnienie / cytat do albumu','Wybrany fragment do pokazania w podglądzie. Pytania i luźne notatki pozostają w swoich polach.')}${field(s.id,'albumQuoteAuthor','Autor wspomnienia / cytatu','Imię i nazwisko','input')}<details class="proof-caption-fields"><summary>Podpisy zdjęć do albumu</summary><div class="fields-grid">${[1,2,3].map(n=>field(s.id,`albumCaption${n}`,`Podpis zdjęcia 0${n}`,'Osoby, miejsce, data i autor fotografii.','input')).join('')}</div></details>${field(s.id,'photos','Wybór zdjęć i podpisy','Album / nazwa pliku / kto jest na zdjęciu / gdzie i kiedy / autor.')}${field(s.id,'todo','Konkretne zadania','Co / kto / do kiedy. Np. Michał — odzyskać pełną galerię finału.')}</div></div></section>`;
 }
 function seasonPage(s,selected='uklad') {
   const index=D.seasons.indexOf(s);
-  const content=selected==='uklad'?seasonLayout(s):selected==='tresc'?seasonNotes(s):seasonArchive(s);
+  const content=selected==='uklad'?seasonLayout(s):selected==='tresc'?seasonNotes(s):selected==='podglad'?seasonProof(s):seasonArchive(s);
   return `<header class="season-head"><div><span class="eyebrow">KARTA SEZONU / ${e(s.roman)} EDYCJA</span><h1>${e(s.label)}</h1><p class="description">${e(s.workingAngle || 'Kronika wyników i punkt wyjścia do wspomnień. Przejrzyj materiały, potem dopisz, co warto opowiedzieć.')}</p><span class="pill plan">${e(planning[s.id]?.status || 'Zbieramy materiały')}</span></div><div class="season-number" aria-hidden="true">${e(s.roman)}</div></header>
   <div class="season-tabs" role="tablist" aria-label="Widok sezonu">${seasonTabs.map((tab,i)=>`<button type="button" role="tab" id="${s.id}-tab-${tab.id}" data-season-tab="${tab.id}" aria-selected="${tab.id===selected}" aria-controls="${s.id}-panel-${tab.id}" tabindex="${tab.id===selected?0:-1}"><span class="season-tab-number" aria-hidden="true">0${i+1}</span><span>${e(tab.label)}</span></button>`).join('')}</div>
   ${seasonTabs.map(tab=>`<div class="season-tab-panel" role="tabpanel" id="${s.id}-panel-${tab.id}" aria-labelledby="${s.id}-tab-${tab.id}" tabindex="0" ${tab.id===selected?'':'hidden'}>${tab.id===selected?content:''}</div>`).join('')}
   <nav class="previous-next" aria-label="Sąsiednie sezony">${index>0?`<a href="#${D.seasons[index-1].id}:${selected}">← ${e(D.seasons[index-1].label)}</a>`:'<a href="#start">← Przegląd</a>'}${index<D.seasons.length-1?`<a href="#${D.seasons[index+1].id}:${selected}">${e(D.seasons[index+1].label)} →</a>`:'<a href="#jubileusz">Rozdział jubileuszowy →</a>'}</nav>`;
+}
+function proofText(value,placeholder) {
+  const text=String(value || '').trim();
+  return text?text.split(/\n\s*\n/u).map(p=>`<p>${e(p).replace(/\n/gu,'<br>')}</p>`).join(''):`<p class="proof-placeholder">${e(placeholder)}</p>`;
+}
+function proofPhoto(s,n,large=false) {
+  const caption=planning[s.id]?.[`albumCaption${n}`];
+  return `<figure class="proof-photo ${large?'proof-photo-large':''}"><div class="proof-photo-frame"><span>Zdjęcie 0${n}</span><small>Miejsce na wybrany kadr</small></div><figcaption>${caption?e(caption):'<span class="proof-placeholder">Podpis zdjęcia do uzupełnienia.</span>'}</figcaption></figure>`;
+}
+function proofRanking(c) {
+  if(!c)return '';
+  const team=c.category.startsWith('TEAM');
+  return `<section class="proof-result"><h4>${e(categoryLabels[c.category])}</h4><table><thead><tr><th scope="col">M.</th><th scope="col">${team?'Uczelnia':'Zawodnik / zawodniczka'}</th><th scope="col">Pkt</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td>${e(r.place)}</td><td>${e(r.name)}${team?'':`<small>${e(r.university)}</small>`}</td><td>${e(Number(r.points).toLocaleString('pl-PL'))}</td></tr>`).join('')}</tbody></table></section>`;
+}
+function proofSheet(s,label,content) {
+  return `<section class="proof-sheet"><header class="proof-running-head"><span>AZS WINTER CUP / 25 LAT</span><span>${e(s.label)} · ${e(label)}</span></header>${content}</section>`;
+}
+function proofChapter(s) {
+  const notes=planning[s.id] || {};
+  const title=notes.layoutTitle?.trim() || notes.angle?.trim() || `Sezon ${s.label}`;
+  const opening=`<div class="proof-chapter-heading"><span class="eyebrow">${e(s.roman)} EDYCJA / ${e(s.label)}</span><h2>${e(title)}</h2>${notes.writer?`<p class="proof-byline">Tekst: ${e(notes.writer)}</p>`:''}</div>${proofPhoto(s,1,true)}`;
+  const story=`<section class="proof-story"><h3>Kronika sezonu</h3>${proofText(notes.draft,'Tu pojawi się tekst z pola „Szkic tekstu do albumu” w zakładce Treść i notatki.')}</section>`;
+  const memory=`<section class="proof-memory"><h3>Wspomnienie</h3>${notes.albumQuote?.trim()?`<blockquote>${proofText(notes.albumQuote,'')}</blockquote><p class="proof-byline">${notes.albumQuoteAuthor?e(notes.albumQuoteAuthor):'<span class="proof-placeholder">Autor wspomnienia do uzupełnienia.</span>'}</p>`:'<p class="proof-placeholder">Miejsce na wybrane wspomnienie lub cytat. Uzupełnij pole „Wspomnienie / cytat do albumu”.</p>'}</section><div class="proof-photo-pair">${proofPhoto(s,2)}${proofPhoto(s,3)}</div>`;
+  const results=`<section class="proof-results"><h3>Karta wyników · ${e(s.label)}</h3><p class="proof-results-caption">Klasyfikacje końcowe sezonu. Top 10 SL/GS oraz uczelnie kobiet i mężczyzn.</p><div class="proof-results-grid">${categoryOrder.map(category=>proofRanking(s.classifications.find(c=>c.category===category))).join('')}</div><p class="proof-credit">Źródło: oficjalne archiwum wyników AZS Winter Cup. Nazwy i kolejność według dokumentów źródłowych.${s.label==='2016/17'?' W rankingu mężczyzn sklasyfikowano osiem uczelni.':''}</p></section>`;
+  const pages=notes.layoutTemplate==='chapter'
+    ?[proofSheet(s,'Otwarcie',opening),proofSheet(s,'Kronika',story),proofSheet(s,'Wyniki',results),proofSheet(s,'Wspomnienia',memory)]
+    :[proofSheet(s,'Kronika i wspomnienia',opening+story+memory),proofSheet(s,'Wyniki',results)];
+  return `<article class="proof-chapter" aria-label="Podgląd rozdziału ${e(s.label)}">${pages.join('')}</article>`;
+}
+function proofControls(s) {
+  return `<div class="proof-controls"><div><span class="eyebrow">PODGLĄD DO KOREKTY</span><h2>${s?`Rozdział ${e(s.label)}`:'Cały album'}</h2></div><div class="proof-actions"><button data-proof-print>Drukuj / zapisz PDF</button><button class="secondary" data-proof-html>Pobierz podgląd HTML ↓</button></div></div><p class="proof-help">Podgląd korzysta z wpisanych tekstów, podpisów i prawdziwych wyników. Puste miejsca pokazują brakujące materiały. Zdjęcia zastępują ramki do czasu przypisania plików. Roboczy wydruk ma format poprzedniego albumu: 220 × 250 mm; długi tekst przechodzi na kolejne strony. Projekt graficzny, typografię i parametry PDF dopasujemy do wytycznych.${s?` <a href="#${s.id}:tresc">Edytuj treść →</a> · <a href="#${s.id}:uklad">Zmień układ →</a>`:''}</p>`;
+}
+function seasonProof(s) {
+  return `<section class="proof-workspace">${proofControls(s)}<div class="proof-document" data-output-name="azs-wintercup-rozdzial-${e(s.label.replace('/','-'))}.html" data-output-title="AZS Winter Cup — rozdział ${e(s.label)}">${proofChapter(s)}</div></section>`;
+}
+function albumPreviewPage() {
+  const global=planning.global || {};
+  const updated=D.medalsUpdated;
+  const hall=updated?`<section class="proof-sheet proof-hall"><header class="proof-running-head"><span>AZS WINTER CUP / 25 LAT</span><span>Hall of Fame</span></header><h2>Hall of Fame</h2><p class="proof-results-caption">Medale zawodów SL/GS: baza pierwszego albumu i sezony 2012/13–2025/26.</p>${updated.tables.map(t=>`<section class="proof-hall-gender"><h3>${t.gender==='K'?'Kobiety':'Mężczyźni'}</h3>${medalTable(t.rows)}</section>`).join('')}<p class="proof-credit">Kolejność według złotych, srebrnych i brązowych medali. Puchary jubileuszowe, równoległe i team event pozostają poza tabelą.</p></section>`:'';
+  return `<section class="proof-workspace">${proofControls()}<p class="proof-help">Teksty sezonów: ${D.seasons.filter(s=>planning[s.id]?.draft?.trim()).length}/${D.seasons.length}. Uwagi redakcyjne, pytania do rozmówców i luźne notatki pozostają w warsztacie.</p><div class="proof-document" data-output-name="azs-wintercup-album-podglad.html" data-output-title="AZS Winter Cup — podgląd albumu 25-lecia"><section class="proof-sheet proof-cover"><span class="eyebrow">ATMOSFERA · ZABAWA · SPORT</span><h2>AZS<br>Winter Cup</h2><p class="proof-cover-number">25<span>lat</span></p><p>Sezony 2012/13–2025/26</p><p class="proof-placeholder">Wersja robocza do korekty</p></section><section class="proof-sheet"><header class="proof-running-head"><span>AZS WINTER CUP / 25 LAT</span><span>Wstęp</span></header><h2>Zanim ruszymy na stok</h2>${proofText(global.albumIntro,'Tekst wstępu do uzupełnienia w sekcji Wstęp i układ, w polu „Tekst wstępu do albumu”.')}</section>${D.seasons.map(proofChapter).join('')}<section class="proof-sheet"><header class="proof-running-head"><span>AZS WINTER CUP / 25 LAT</span><span>Rozdział jubileuszowy</span></header><h2>Kolejne pokolenia</h2>${proofText(global.albumAnniversary,'Tekst rozdziału jubileuszowego do uzupełnienia w jego sekcji redakcyjnej.')}</section>${hall}</div></section>`;
+}
+function downloadProof() {
+  const proof=document.querySelector('.proof-document');if(!proof)return;
+  const styles=document.querySelector('head style').textContent;
+  const title=proof.dataset.outputTitle || 'AZS Winter Cup — podgląd';
+  const html=`<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><style>${styles}</style></head><body class="proof-mode proof-snapshot"><header class="proof-snapshot-header">${e(title)} · robocza wersja do korekty. Wydruk / zapis PDF: menu przeglądarki.</header><main>${proof.outerHTML}</main></body></html>`;
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=proof.dataset.outputName;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);
 }
 function introPage() {
   return `<span class="eyebrow">OTWARCIE ALBUMU</span><h1 class="route-title">Zanim zaczniemy<br><em>kolejny przejazd.</em></h1><p class="muted">Robocza koncepcja wstępu i rytmu sezonów. Zdjęcia zastępują miejsca do późniejszego wyboru z archiwum Michała Szyplińskiego.</p>
@@ -239,7 +288,7 @@ function introPage() {
   <p class="source-note">Objętość i termin wydania nie są ustalone. Ten układ służy do planowania; zakres zdjęć oraz rozkład stron zmienimy po zebraniu materiałów.</p>
   ${sectionTitle('Co bierzemy z pierwszego albumu?','Analiza wzorca: 60 stron PDF')}
   <div class="panel"><p>Wzorzec łączy edytorial, kroniki sezonów, „kartę sławy” z wynikami, fotograficzne rozkładówki, tabelę medalową i osobiste wspomnienia w „Gadających głowach”. Nowy tom zachowuje ten rytm, a historie i rozmówców przypisujemy już przy zbieraniu materiałów do sezonów.</p><p class="source-note">Źródło: album X-lecia AZS Winter Cup, 2013; PDF s. 4, 6, 8–39 i 48–57. Oryginał w plikach użytkownika, nie jest dołączany do publikacji.</p></div>
-  <div class="planning"><div class="fields-grid">${field('global','intro','Wasz wstęp / uwagi do otwarcia','Autor wstępu, sceny otwierające, pomysły na fotografie.')}</div></div>`;
+  <div class="planning"><div class="fields-grid">${field('global','intro','Wasz wstęp / uwagi do otwarcia','Autor wstępu, sceny otwierające, pomysły na fotografie.')}${field('global','albumIntro','Tekst wstępu do albumu','Ten tekst pojawi się w podglądzie albumu. Pomysły i uwagi zachowaj w polu powyżej.')}</div></div>`;
 }
 function interviewsPage() {
   const people=interviewPeople();
@@ -269,7 +318,7 @@ function anniversaryPage() {
   return `<span class="eyebrow">ROZDZIAŁ JUBILEUSZOWY</span><h1 class="route-title">Co zostaje<br>po tych zimach?</h1><p class="muted">Miejsce na domknięcie 14 sezonów. Tu połączymy pokolenia, a potem przejdziemy do Hall of Fame.</p>
   <div class="wireframe"><div class="photo-slot tall">WSPÓLNY PORTRET / SPOTKANIE POKOLEŃ<br>Do zaplanowania z organizatorami i Michałem.</div><div class="wire-text"><h2>Te same emocje,<br>kolejne twarze.</h2><p>Pomysł redakcyjny: krótkie wypowiedzi dawnych i obecnych zawodników, zestawione ze zdjęciami „wtedy i dziś”.</p><p class="fake-quote">Miejsce na autentyczny cytat po rozmowie.</p><p class="byline">Bez fikcyjnych cytatów i podpisów.</p></div><div class="photo-slot">WTEDY / DZIŚ<br>Ta sama osoba, stok lub drużyna.</div></div>
   <div class="two-col"><div class="panel"><h3>Możliwe wątki</h3><ul><li>Jak zmienił się sportowy poziom ligi i organizacja zawodów?</li><li>Co pozostało z relacji poza trasą?</li><li>Jak nowe pokolenie opowiada własny Winter Cup?</li></ul></div><div class="panel"><h3>Do zebrania</h3><ul class="checklist"><li>Głos organizatorów na jubileusz.</li><li>Wspólna fotografia i podpisane portrety.</li><li>Autentyczne wspomnienia z rozmów.</li><li>Zweryfikowane liczby do podsumowania.</li></ul></div></div>
-  <div class="planning"><div class="fields-grid">${field('global','anniversary','Pomysły do rozdziału jubileuszowego','Sceny, osoby, zdjęcia i wspólne motywy.')}</div></div>`;
+  <div class="planning"><div class="fields-grid">${field('global','anniversary','Pomysły do rozdziału jubileuszowego','Sceny, osoby, zdjęcia i wspólne motywy.')}${field('global','albumAnniversary','Tekst rozdziału jubileuszowego do albumu','Wersja tekstu przeznaczona do podglądu i korekty.')}</div></div>`;
 }
 function medalTable(rows,breakdown=false) {
   const medals=v=>`${v?.gold || 0} / ${v?.silver || 0} / ${v?.bronze || 0}`;
@@ -309,9 +358,10 @@ function route() {
   const s=D.seasons.find(x=>x.id===id);
   let key='';try{key=decodeURIComponent(section || '');}catch{}
   const person=id==='osoba'?interviewPeople().find(p=>p.key===key):null;
-  const pages={start:overview,wstep:introPage,rozmowy:interviewsPage,jubileusz:anniversaryPage,hall:hallPage};
+  const pages={start:overview,wstep:introPage,rozmowy:interviewsPage,jubileusz:anniversaryPage,hall:hallPage,podglad:albumPreviewPage};
   main.innerHTML=id==='osoba'?interviewPersonPage(person):s?seasonPage(s,seasonTab(section)):(pages[id] || overview)();
-  document.title=`${id==='osoba'?(person?.name || 'Karta wywiadu'):s?s.label:({wstep:'Wstęp',rozmowy:'Do przepytania',jubileusz:'Jubileusz',hall:'Hall of Fame'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
+  document.title=`${id==='osoba'?(person?.name || 'Karta wywiadu'):s?s.label:({wstep:'Wstęp',rozmowy:'Do przepytania',jubileusz:'Jubileusz',hall:'Hall of Fame',podglad:'Podgląd albumu'}[id] || 'Warsztat albumu')} · AZS Winter Cup 25`;
+  document.body.classList.toggle('proof-mode',id==='podglad' || Boolean(s && seasonTab(section)==='podglad'));
   renderNav();
   window.scrollTo({top:0});
   if(s && pendingSeasonTabFocus?.season===s.id)document.getElementById(`${s.id}-tab-${pendingSeasonTabFocus.tab}`)?.focus({preventScroll:true});
@@ -329,6 +379,8 @@ document.querySelector('#season-search').addEventListener('input',renderNav);
 document.querySelector('.skip').addEventListener('click',ev=>{ev.preventDefault();main.focus();});
 document.querySelector('#import-trigger').addEventListener('click',()=>document.querySelector('#import').click());
 main.addEventListener('click',ev=>{
+  if(ev.target.closest('[data-proof-print]')){window.print();return;}
+  if(ev.target.closest('[data-proof-html]')){downloadProof();return;}
   const seasonButton=ev.target.closest('[data-season-tab]');
   if(seasonButton){openSeasonTab(seasonButton);return;}
   const layoutButton=ev.target.closest('[data-layout]');
